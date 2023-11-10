@@ -153,7 +153,7 @@
                 }
             }
 
-            .toggleIcon{
+            .toggleIcon {
                 display: none;
             }
 
@@ -238,7 +238,7 @@
                 display: flex;
                 justify-content: flex-end;
 
-                .navList{
+                .navList {
                     display: none;
                 }
 
@@ -248,7 +248,7 @@
                     font-size: 25px;
                     transition: 0.4s;
 
-                    &:hover{
+                    &:hover {
                         color: #f60;
                         transform: scale(1.1);
                     }
@@ -297,7 +297,7 @@
                 display: flex;
                 justify-content: flex-start;
 
-                .navList{
+                .navList {
                     display: none;
                 }
 
@@ -307,7 +307,7 @@
                     font-size: 25px;
                     transition: 0.4s;
 
-                    &:hover{
+                    &:hover {
                         color: #f60;
                         transform: scale(1.1);
                     }
@@ -339,7 +339,7 @@
     }
 }
 
-.overlay{
+.overlay {
     width: 100vw;
     height: 100vh;
     position: relative;
@@ -350,7 +350,7 @@
     transition: 0.4s;
 }
 
-.sideNavContainer{
+.sideNavContainer {
     width: 400px;
     height: 100vh;
     display: flex;
@@ -363,7 +363,7 @@
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-    .sideNavCloseBtnDiv{
+    .sideNavCloseBtnDiv {
         opacity: 0.7;
         width: 40px;
         height: 40px;
@@ -372,36 +372,36 @@
         cursor: pointer;
         transition: 0.3s;
 
-        &:hover{
+        &:hover {
             opacity: 1;
         }
 
-        .sideNavCloseBtn{
+        .sideNavCloseBtn {
             font-size: 40px;
         }
     }
 
-    #sideNav{
+    #sideNav {
         height: 800px;
         padding: 20px 10px;
 
 
-        .sideNavList{
+        .sideNavList {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             row-gap: 5px;
 
-            li{
+            li {
                 cursor: pointer;
                 padding: 10px 30px;
                 transition: 0.4s;
 
-                &:hover{
+                &:hover {
                     background-color: #222;
                 }
 
-                a{
+                a {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -414,7 +414,7 @@
             }
         }
 
-        .sideShopSubNav{
+        .sideShopSubNav {
             width: 400px;
             height: 800px;
             position: absolute;
@@ -426,37 +426,37 @@
             margin-top: 60px;
             transition: 0.5s;
 
-            .shopNavTitle{
+            .shopNavTitle {
                 cursor: pointer;
                 padding: 12px 26px;
                 transition: 0.4s;
 
-                &:hover{
+                &:hover {
                     background-color: #222;
 
                 }
 
-                h3{
+                h3 {
                     font-size: 18px;
                     font-weight: 400;
 
-                    i{
+                    i {
                         margin-right: 15px;
                         font-size: 15px;
                     }
                 }
             }
 
-            .sideShopItem{
+            .sideShopItem {
                 display: flex;
                 padding: 12px 26px;
 
-                img{
+                img {
                     width: 114px;
                     height: 140px;
                 }
 
-                .sideTextBox{
+                .sideTextBox {
                     width: 234px;
                     height: 150px;
                     padding: 10px;
@@ -468,7 +468,7 @@
                     justify-content: flex-start;
                     row-gap: 30px;
 
-                    .sideShopNowBtn{
+                    .sideShopNowBtn {
                         cursor: pointer;
                         background-color: transparent;
                         font-size: 19px;
@@ -477,7 +477,7 @@
                         border-radius: 6px;
                         transition: 0.3s;
 
-                        &:hover{
+                        &:hover {
                             background-color: rgb(187, 63, 0);
                         }
                     }
@@ -485,7 +485,7 @@
             }
         }
 
-        .sidePagesSubNav{
+        .sidePagesSubNav {
             width: 400px;
             height: 800px;
             position: absolute;
@@ -497,38 +497,38 @@
             margin-top: 60px;
             transition: 0.5s;
 
-            .pagesNavTitle{
+            .pagesNavTitle {
                 cursor: pointer;
                 padding: 12px 26px;
                 transition: 0.4s;
 
-                &:hover{
+                &:hover {
                     background-color: #222;
 
                 }
 
-                h3{
+                h3 {
                     font-size: 18px;
                     font-weight: 400;
 
-                    i{
+                    i {
                         margin-right: 15px;
                         font-size: 15px;
                     }
                 }
             }
 
-            .subPagesList{
+            .subPagesList {
                 padding: 12px 26px;
 
-                li{
+                li {
                     cursor: pointer;
                     font-size: 18px;
                     font-weight: 300;
                     padding: 8px 18px;
                     transition: 0.3s;
 
-                    &:hover{
+                    &:hover {
                         background-color: #222;
                     }
                 }
@@ -538,39 +538,16 @@
 
     }
 
-    .sideIconMenu{
+    .sideIconMenu {
         position: absolute;
         bottom: 0;
         padding: 20px;
         background-color: #222;
         width: 100%;
 
-        i{
+        i {
             font-size: 27px;
             padding-right: 20px;
-        }
-    }
-
-}
-
-
-.sideShoppingCart{
-    width: 400px;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgb(57, 62, 64);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-    .shoppingCartTitleBox{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px;
-
-        .shoppingCartTitle{
-            font-weight: 500;
         }
     }
 

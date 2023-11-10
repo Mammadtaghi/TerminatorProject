@@ -51,6 +51,19 @@ function closePages() {
     sidePagesSubNav.style.right = '-400px'
 }
 
+// Shopping Cart Opening and Closing
 
+// HTML stuff
+const sideShoppingCart = document.querySelector('.sideShoppingCart')
+const shoppingBag = document.querySelector('.shoppingBag')
+const shoppingCartCloseBtn = document.querySelector('.shoppingCartCloseBtn')
+
+function openShoppingCart() {
+    sideShoppingCart.style.right = '0px'
+}
+
+function closeShoppingCart() {
+    sideShoppingCart.style.right = '-400px'
+}
 
 

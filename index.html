@@ -124,7 +124,7 @@
 
                     <button class="tryForFreeBtn">TRY FOR FREE</button>
 
-                    <i class="fa-solid fa-bag-shopping">
+                    <i class="fa-solid fa-bag-shopping shoppingBag" onclick="openShoppingCart()">
                         <div class="productCountOnIcon">2</div>
                     </i>
 
@@ -261,18 +261,103 @@
         </div>
         <!-- Side Nav Container end -->
 
+        <!-- Side Shopping Cart start -->
         <div class="sideShoppingCart">
 
             <div class="shoppingCartTitleBox">
 
                 <h2 class="shoppingCartTitle">Shopping Cart</h2>
 
-                <i class="fa-solid fa-xmark"></i>
+                <i class="fa-solid fa-xmark shoppingCartCloseBtn" onclick="closeShoppingCart()"></i>
+
+            </div>
+
+            <div class="shoppingCartProductBox">
+                <!-- ExampleProduct start -->
+
+                <div class="product">
+                    
+                    <img class="productImg" src="assets/images/shop-4.png" alt="">
+
+                    <div class="productInfoBox">
+                        
+                        <div class="productTitleBox">
+
+                            <h3 class="productName">The Dark War</h3>
+
+                            <div class="productDeleteBtn"><i class="fa-solid fa-xmark productDeleteIcon"></i></div>    
+
+                        </div>
+
+                        <div class="productPrice">$13.00</div>
+
+                        <div class="productCountBox">
+
+                            <div class="decreaseCount"><i class="fa-solid fa-minus"></i></div>
+
+                            <input type="number" class="productCount">
+
+                            <div class="increaseCount"><i class="fa-solid fa-plus"></i></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ExampleProduct end -->
+            </div>
+
+            <div class="shoppingCartBottomBox">
+
+                <div class="summariesBox">
+
+                    <div class="summary addNote">
+                        
+                        <i class="fa-solid fa-list summaryIcon"></i>
+
+                        <h6 class="summaryTitle">Add Note</h6>
+
+                    </div>
+
+                    <div class="summary shipping">
+
+                        <i class="fa-solid fa-truck-fast summaryIcon"></i>
+
+                        <h6 class="summaryTitle">Shipping</h6>
+
+                    </div>
+
+                    <div class="summary discount">
+
+                        <i class="fa-regular fa-credit-card summaryIcon"></i>
+
+                        <h6 class="summaryTitle">Discount</h6>
+
+                    </div>
+
+                </div>
+
+                <div class="subTotalBox">
+
+                    <h3 class="subTotal">Subtotal <span class="subTotalPrice">$13.00</span></h3>
+
+                    <p class="taxInfo">Taxes and shipping calculated at checkout</p>
+
+                </div>
+
+                <div class="shoppingCartBottomButtons">
+
+                    <button class="checkoutBtn">CHECK OUT</button>
+
+                    <button class="viewCartBtn">VIEW CART</button>
+
+                </div>
 
             </div>
 
         </div>
-
+        <!-- Side Shopping Cart end -->
 
     </header>
     <!-- Header end -->
