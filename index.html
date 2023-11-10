@@ -1,20 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <!-- Header start -->
     <header>
-        <nav></nav>
+
+        <!-- Top Nav start -->
+        <nav id="nav">
+
+            <!-- Container start -->
+            <div class="navContainer">
+
+                <!-- Left Container start -->
+                <div class="navContainerLeft">
+
+                    <!-- Nav List start -->
+                    <ul class="navList">
+                        <li><a href="#"><span data-hover="Home">Home</span></a></li>
+                        <li><a href="#"><span data-hover="About">About</span></a></li>
+                        <li class="shopTag"><a href="#"><span data-hover="Shop">Shop</span><i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+                        <li><a href="#"><span data-hover="Blog">Blog</span></a></li>
+                        <li class="pagesTag"><a href="#"><span data-hover="Pages">Pages</span><i
+                                    class="fa-solid fa-sort-down"></i></a></li>
+
+                        <div class="subShop subnav">
+
+                            <div class="aiDevelopment shopItem">
+
+                                <img src="assets/images/shopIcon-1.png" alt="" draggable="false">
+
+                                <div class="textBox">
+
+                                    <h3 class="shopItemTitle" draggable="false">AI Development</h3>
+
+                                    <button class="shopNowBtn">SHOP NOW</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="imageGenerator shopItem">
+
+                                <img src="assets/images/shopIcon-2.png" alt="" draggable="false">
+
+                                <div class="textBox">
+
+                                    <h3 class="shopItemTitle" draggable="false">Image Generator</h3>
+
+                                    <button class="shopNowBtn">SHOP NOW</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="softwareDevelopment shopItem">
+
+                                <img src="assets/images/shopIcon-3.png" alt="" draggable="false">
+
+                                <div class="textBox">
+
+                                    <h3 class="shopItemTitle" draggable="false">Software Development</h3>
+
+                                    <button class="shopNowBtn">SHOP NOW</button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="aiConsuling shopItem">
+
+                                <img src="assets/images/shopIcon-4.png" alt="" draggable="false">
+
+                                <div class="textBox">
+
+                                    <h3 class="shopItemTitle" draggable="false">AI Consuling</h3>
+
+                                    <button class="shopNowBtn">SHOP NOW</button>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="subPages subnav">
+
+                            <ul>
+                                <li><a href="#">FAQ</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+
+                        </div>
+
+                    </ul>
+                    <!-- Nav List end -->
+
+                    <i class="fa-solid fa-bars toggleIcon" onclick="openSideNav()"></i>
+
+                </div>
+                <!-- Left Container end -->
+
+                <!-- Middle Container start -->
+                <div class="navContainerMiddle">
+                    <a href="#"><img src="assets/images/TerminatorTitle.png" alt="AI-Max"></a>
+                </div>
+                <!-- Middle Container end -->
+
+                <!-- Right Container start -->
+                <div class="navContainerRight">
+
+
+                    <button class="tryForFreeBtn">TRY FOR FREE</button>
+
+                    <i class="fa-solid fa-bag-shopping">
+                        <div class="productCountOnIcon">2</div>
+                    </i>
+
+                </div>
+                <!-- Right Container end -->
+
+            </div>
+            <!-- Container end -->
+
+        </nav>
+        <!-- Top Nav end -->
+
+        <div class="overlay"></div>
+
+        <!-- Side Nav Container start -->
+        <div class="sideNavContainer">
+
+            <!-- Side Nav Close Button start -->
+            <div class="sideNavCloseBtnDiv">
+
+                <i class="fa-solid fa-xmark sideNavCloseBtn" onclick="closeSideNav()"></i>
+
+            </div>
+            <!-- Side Nav Close Button end -->
+
+            <!-- Side Nav start -->
+            <nav id="sideNav">
+
+                <ul class="sideNavList">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li class="sideNavShop" onclick="openShop()"><a href="#">Shop<i class="fa-solid fa-arrow-right-long"></i></a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li class="sideNavPages" onclick="openPages()"><a href="#">Pages<i class="fa-solid fa-arrow-right-long"></i></a></li>
+                </ul>
+
+                <div class="sideShopSubNav">
+
+                    <div class="shopNavTitle" onclick="closeShop()">
+
+                        <h3><i class="fa-solid fa-arrow-left-long"></i>Shop</h3>
+
+                    </div>
+
+                    <div class="aiDevelopment sideShopItem">
+
+                        <img src="assets/images/shopIcon-1.png" alt="" draggable="false">
+
+                        <div class="sideTextBox">
+
+                            <h3 class="sideShopItemTitle" draggable="false">AI Development</h3>
+
+                            <button class="sideShopNowBtn">Shop Now</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="imageGenerator sideShopItem">
+
+                        <img src="assets/images/shopIcon-2.png" alt="" draggable="false">
+
+                        <div class="sideTextBox">
+
+                            <h3 class="sideShopItemTitle" draggable="false">Image Generator</h3>
+
+                            <button class="sideShopNowBtn">Shop Now</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="softwareDevelopment sideShopItem">
+
+                        <img src="assets/images/shopIcon-3.png" alt="" draggable="false">
+
+                        <div class="sideTextBox">
+
+                            <h3 class="sideShopItemTitle" draggable="false">Software Development</h3>
+
+                            <button class="sideShopNowBtn">Shop Now</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="aiConsuling sideShopItem">
+
+                        <img src="assets/images/shopIcon-4.png" alt="" draggable="false">
+
+                        <div class="sideTextBox">
+
+                            <h3 class="sideShopItemTitle" draggable="false">AI Consuling</h3>
+
+                            <button class="sideShopNowBtn">Shop Now</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="sidePagesSubNav">
+
+                    <div class="pagesNavTitle" onclick="closePages()">
+
+                        <h3><i class="fa-solid fa-arrow-left-long"></i>Pages</h3>
+
+                    </div>
+                    
+                    <ul class="subPagesList">
+                        <li>FAQ</li>
+                        <li>Contact</li>
+                    </ul>
+
+                </div>
+
+
+            </nav>
+            <!-- Side Nav end -->
+
+            <!-- Side Nav Icon Menu start -->
+            <div class="sideIconMenu">
+
+                <i class="fa-brands fa-twitter"></i>
+
+                <i class="fa-brands fa-square-facebook"></i>
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </div>
+            <!-- Side Nav Icon Menu end -->
+
+        </div>
+        <!-- Side Nav Container end -->
+
+        <div class="sideShoppingCart">
+
+            <div class="shoppingCartTitleBox">
+
+                <h2 class="shoppingCartTitle">Shopping Cart</h2>
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </div>
+
+        </div>
+
+
     </header>
-    
+    <!-- Header end -->
+
     <main>
-        
+
         <section id="searchRobot"></section>
         <section id="brandLogo"></section>
         <section id="aboutUs"></section>
@@ -31,5 +295,7 @@
 
     <footer></footer>
 
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

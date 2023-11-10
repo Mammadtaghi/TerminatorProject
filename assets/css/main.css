@@ -9,4 +9,480 @@
 
 * {
   font-family: "Readex Pro", sans-serif;
+}
+
+#nav {
+  position: relative;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav .navContainer {
+  width: 95%;
+  display: grid;
+  grid-template-areas: "Left Middle Right";
+  grid-template-columns: 1fr auto 1fr;
+}
+#nav .navContainer .navContainerLeft {
+  grid-area: Left;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#nav .navContainer .navContainerLeft .navList {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#nav .navContainer .navContainerLeft .navList li {
+  overflow: hidden;
+  margin: 10px 0;
+}
+#nav .navContainer .navContainerLeft .navList li a,
+#nav .navContainer .navContainerLeft .navList li i {
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+}
+#nav .navContainer .navContainerLeft .navList li a {
+  font-weight: 500;
+}
+#nav .navContainer .navContainerLeft .navList li a span {
+  padding-right: 5px;
+  position: relative;
+  top: 0;
+  transition: 0.4s linear;
+}
+#nav .navContainer .navContainerLeft .navList li a span::before {
+  content: attr(data-hover);
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+#nav .navContainer .navContainerLeft .navList li:hover span {
+  top: 30px;
+}
+#nav .navContainer .navContainerLeft .navList .shopTag:hover ~ .subShop {
+  opacity: 1;
+  z-index: 2;
+}
+#nav .navContainer .navContainerLeft .navList .subShop {
+  opacity: 0;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: -2;
+  width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #f60;
+  border-radius: 8px;
+  background-color: #444;
+  padding: 35px;
+  overflow: hidden;
+  row-gap: 30px;
+  transition: 0.5s;
+}
+#nav .navContainer .navContainerLeft .navList .subShop:hover {
+  opacity: 1;
+  z-index: 2;
+}
+#nav .navContainer .navContainerLeft .navList .subShop .shopItem {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+#nav .navContainer .navContainerLeft .navList .subShop .shopItem .textBox {
+  width: 300px;
+  height: 121px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 40px;
+}
+#nav .navContainer .navContainerLeft .navList .subShop .shopItem .textBox .shopNowBtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 13px 30px;
+  transition: 0.6s;
+}
+#nav .navContainer .navContainerLeft .navList .subShop .shopItem .textBox .shopNowBtn:hover {
+  background-color: rgb(187, 63, 0);
+}
+#nav .navContainer .navContainerLeft .navList .pagesTag:hover ~ .subPages {
+  opacity: 1;
+  z-index: 2;
+}
+#nav .navContainer .navContainerLeft .navList .subPages {
+  opacity: 0;
+  position: absolute;
+  top: 45px;
+  left: 16em;
+  z-index: -2;
+  background-color: rgba(51, 51, 51, 0.3);
+  padding: 35px 35px 35px 35px;
+  border: 1px solid #b34903;
+  border-radius: 6px;
+  transition: 0.4s;
+}
+#nav .navContainer .navContainerLeft .navList .subPages:hover {
+  opacity: 1;
+  z-index: 2;
+}
+#nav .navContainer .navContainerLeft .toggleIcon {
+  display: none;
+}
+#nav .navContainer .navContainerMiddle {
+  grid-area: Middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav .navContainer .navContainerMiddle img {
+  width: 130px;
+  height: 25px;
+}
+#nav .navContainer .navContainerRight {
+  grid-area: Right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 60px;
+}
+#nav .navContainer .navContainerRight .tryForFreeBtn {
+  cursor: pointer;
+  min-width: 84px;
+  min-height: 44px;
+  padding: 0px 25px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid #444;
+  transition: 0.4s;
+}
+#nav .navContainer .navContainerRight .tryForFreeBtn:hover {
+  background-color: #b34903;
+}
+#nav .navContainer .navContainerRight .fa-bag-shopping {
+  cursor: pointer;
+  position: relative;
+  font-size: 25px;
+  transition: 0.4s;
+}
+#nav .navContainer .navContainerRight .fa-bag-shopping:hover {
+  transform: scale(1.1);
+  color: #f60;
+}
+#nav .navContainer .navContainerRight .fa-bag-shopping .productCountOnIcon {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #777;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+  #nav {
+    background-color: #222;
+    height: 60px;
+  }
+  #nav .navContainer {
+    width: 95%;
+    display: grid;
+    grid-template-areas: "Middle Left Right";
+    grid-template-columns: 1fr auto auto;
+    column-gap: 20px;
+  }
+  #nav .navContainer .navContainerLeft {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #nav .navContainer .navContainerLeft .navList {
+    display: none;
+  }
+  #nav .navContainer .navContainerLeft .fa-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    transition: 0.4s;
+  }
+  #nav .navContainer .navContainerLeft .fa-bars:hover {
+    color: #f60;
+    transform: scale(1.1);
+  }
+  #nav .navContainer .navContainerMiddle {
+    grid-area: Middle;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #nav .navContainer .navContainerMiddle img {
+    width: 130px;
+    height: 25px;
+  }
+  #nav .navContainer .navContainerRight {
+    column-gap: 0;
+  }
+  #nav .navContainer .navContainerRight .tryForFreeBtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  #nav {
+    background-color: #222;
+    height: 60px;
+  }
+  #nav .navContainer {
+    width: 95%;
+    display: grid;
+    grid-template-areas: "Left Middle Right";
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+  }
+  #nav .navContainer .navContainerLeft {
+    display: flex;
+    justify-content: flex-start;
+  }
+  #nav .navContainer .navContainerLeft .navList {
+    display: none;
+  }
+  #nav .navContainer .navContainerLeft .fa-bars {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    transition: 0.4s;
+  }
+  #nav .navContainer .navContainerLeft .fa-bars:hover {
+    color: #f60;
+    transform: scale(1.1);
+  }
+  #nav .navContainer .navContainerMiddle {
+    grid-area: Middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #nav .navContainer .navContainerMiddle img {
+    width: 130px;
+    height: 25px;
+  }
+  #nav .navContainer .navContainerRight {
+    column-gap: 0;
+  }
+  #nav .navContainer .navContainerRight .tryForFreeBtn {
+    display: none;
+  }
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(51, 51, 51, 0.6156862745);
+  transition: 0.4s;
+}
+
+.sideNavContainer {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -400px;
+  background-color: rgb(57, 62, 64);
+  transition: 0.4s;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sideNavContainer .sideNavCloseBtnDiv {
+  opacity: 0.7;
+  width: 40px;
+  height: 40px;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sideNavContainer .sideNavCloseBtnDiv:hover {
+  opacity: 1;
+}
+.sideNavContainer .sideNavCloseBtnDiv .sideNavCloseBtn {
+  font-size: 40px;
+}
+.sideNavContainer #sideNav {
+  height: 800px;
+  padding: 20px 10px;
+}
+.sideNavContainer #sideNav .sideNavList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 5px;
+}
+.sideNavContainer #sideNav .sideNavList li {
+  cursor: pointer;
+  padding: 10px 30px;
+  transition: 0.4s;
+}
+.sideNavContainer #sideNav .sideNavList li:hover {
+  background-color: #222;
+}
+.sideNavContainer #sideNav .sideNavList li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 19px;
+  font-weight: 300;
+}
+.sideNavContainer #sideNav .sideShopSubNav {
+  width: 400px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  right: -400px;
+  z-index: 3;
+  background-color: #111;
+  padding: 13px 0;
+  margin-top: 60px;
+  transition: 0.5s;
+}
+.sideNavContainer #sideNav .sideShopSubNav .shopNavTitle {
+  cursor: pointer;
+  padding: 12px 26px;
+  transition: 0.4s;
+}
+.sideNavContainer #sideNav .sideShopSubNav .shopNavTitle:hover {
+  background-color: #222;
+}
+.sideNavContainer #sideNav .sideShopSubNav .shopNavTitle h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.sideNavContainer #sideNav .sideShopSubNav .shopNavTitle h3 i {
+  margin-right: 15px;
+  font-size: 15px;
+}
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem {
+  display: flex;
+  padding: 12px 26px;
+}
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem img {
+  width: 114px;
+  height: 140px;
+}
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem .sideTextBox {
+  width: 234px;
+  height: 150px;
+  padding: 10px;
+  background-color: rgba(57, 62, 64, 0.55);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  row-gap: 30px;
+}
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem .sideTextBox .sideShopNowBtn {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 19px;
+  padding: 10px 27px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem .sideTextBox .sideShopNowBtn:hover {
+  background-color: rgb(187, 63, 0);
+}
+.sideNavContainer #sideNav .sidePagesSubNav {
+  width: 400px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  right: -400px;
+  z-index: 3;
+  background-color: #111;
+  padding: 13px 0;
+  margin-top: 60px;
+  transition: 0.5s;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .pagesNavTitle {
+  cursor: pointer;
+  padding: 12px 26px;
+  transition: 0.4s;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .pagesNavTitle:hover {
+  background-color: #222;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .pagesNavTitle h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .pagesNavTitle h3 i {
+  margin-right: 15px;
+  font-size: 15px;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .subPagesList {
+  padding: 12px 26px;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .subPagesList li {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 8px 18px;
+  transition: 0.3s;
+}
+.sideNavContainer #sideNav .sidePagesSubNav .subPagesList li:hover {
+  background-color: #222;
+}
+.sideNavContainer .sideIconMenu {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  background-color: #222;
+  width: 100%;
+}
+.sideNavContainer .sideIconMenu i {
+  font-size: 27px;
+  padding-right: 20px;
+}
+
+.sideShoppingCart {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(57, 62, 64);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.sideShoppingCart .shoppingCartTitleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.sideShoppingCart .shoppingCartTitleBox .shoppingCartTitle {
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */
