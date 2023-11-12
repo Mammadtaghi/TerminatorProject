@@ -63,12 +63,18 @@ const shoppingCartCloseBtn = document.querySelector('.shoppingCartCloseBtn')
 
 function openShoppingCart() {
     overlay.style.zIndex = '0'
-    sideShoppingCart.style.right = '0px'
+    sideShoppingCart.style.display = 'block'
+    setTimeout(() => {
+        sideShoppingCart.style.opacity = '1'
+        sideShoppingCart.style.right = '0px'
+    }, 100);
 }
 
 function closeShoppingCart() {
     overlay.style.zIndex = '-2'
+    sideShoppingCart.style.opacity = '0'
     sideShoppingCart.style.right = '-400px'
+    setTimeout(()=> sideShoppingCart.style.display = 'none', 300)
 }
 
 // Sleep Function
