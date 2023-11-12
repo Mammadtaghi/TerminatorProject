@@ -1,3 +1,6 @@
+// AOS
+AOS.init();
+
 // Toggle Icon Fucntion
 
 // HTML stuff
@@ -59,11 +62,266 @@ const shoppingBag = document.querySelector('.shoppingBag')
 const shoppingCartCloseBtn = document.querySelector('.shoppingCartCloseBtn')
 
 function openShoppingCart() {
+    overlay.style.zIndex = '0'
     sideShoppingCart.style.right = '0px'
 }
 
 function closeShoppingCart() {
+    overlay.style.zIndex = '-2'
     sideShoppingCart.style.right = '-400px'
 }
+
+// Sleep Function
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
+
+// Getting Products From API
+
+// HTML stuff
+const productsBox = document.querySelector('.productsBox')
+
+// Getting Data From API
+async function getData() {
+    let response = await axios.get('http://localhost:3000/products')
+    let data = response.data
+
+    productsBox.innerHTML = ''
+
+    // Create and place every product
+    data.forEach(element => {
+        let product = document.createElement('div')
+
+        product.innerHTML = `
+        <div class="product">
+            <div class="productImgBox">
+                <img class="productImg" src="${element.img}" alt="">
+                <div class="addButtons">
+                    <button class="addToCartBtn productBtn" onclick="AddToCart(${element.id})"><i class="fa-solid fa-bag-shopping"></i><span class="description">Add To Cart</span></button>
+                    <button class="addToWishlistBtn productBtn"><i class="fa-solid fa-heart"></i><span class="description">Add To Wishlist</span></button>
+                </div>
+            </div>
+            <div class="productTextBox">
+                <h4 class="productName">${element.name}</h4>
+                <h3 class="productPrice">$${element.price}</h3>
+            </div>
+        </div>
+        `
+        // Place product in productsBox
+        productsBox.append(product)
+    });
+
+}
+
+getData()
+
+
+// AddToCart Function (Adds product to basket array in json)
+async function AddToCart(productId) {
+    let response = await axios.get(`http://localhost:3000/products/${productId}`)
+
+    const product = response.data
+
+    try {
+        product.count = 1
+
+        await axios.post(`http://localhost:3000/basket`, product)
+    } catch (error) {
+        alert('You have added this product before')
+    }
+
+}
+
+// Getting product from API and adding to Shopping Cart in HTML
+
+// HTML stuff
+const shoppingCartProductBox = document.querySelector('.shoppingCartProductBox')
+const productCountOnIcon = document.querySelector('.productCountOnIcon')
+
+async function GetToShoppingCart() {
+    let response = await axios.get('http://localhost:3000/basket')
+
+    const data = response.data
+
+    let count = 0
+
+    data.forEach(element => {
+        let product = document.createElement('div')
+
+        product.innerHTML = `
+        <div class="shoppingCartProduct">
+            <img class="shoppingCartProductImg" src="${element.img}" alt="">
+                <div class="shoppingCartProductInfoBox">
+                    <div class="shoppingCartProductTitleBox">
+                        <h3 class="shoppingCartProductName">${element.name}</h3>
+                    <div class="shoppingCartProductDeleteBtn"><i class="fa-solid fa-xmark shoppingCartProductDeleteIcon" onclick="DeleteProduct(${element.id})"></i></div>
+                </div>
+                <div class="shoppingCartProductPrice">$${element.price*element.count}</div>
+                <div class="shoppingCartProductCountBox">
+                    <div class="decreaseCount" onclick="CountMinus(${element.id})"><i class="fa-solid fa-minus"></i></div>
+                    <input type="number" onchange="ChangeCount(${element.id}, this.value)" class="shoppingCartProductCount" value="${element.count}">
+                    <div class="increaseCount" onclick="CountPlus(${element.id})"><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </div>
+        </div>
+        `
+        shoppingCartProductBox.append(product)
+
+        count += element.count
+
+        productCountOnIcon.textContent = count
+
+    });
+}
+
+GetToShoppingCart()
+
+// Shopping Cart Product Delete Function
+
+async function DeleteProduct(productId) {
+    let response = await axios.delete(`http://localhost:3000/basket/${productId}`)
+
+    getData()
+}
+
+
+// CountPlus Function
+
+async function CountMinus(productId) {
+    let response = await axios.get(`http://localhost:3000/basket/${productId}`)
+
+    const product = response.data
+
+    if (product.count === 1) {
+        await axios.delete(`http://localhost:3000/basket/${productId}`)
+    }
+    else if(product.count > 1){
+        product.count--
+        await axios.put(`http://localhost:3000/basket/${productId}`, product)
+
+    }
+
+    getData()
+}
+
+
+// CountPlus Function
+
+async function CountPlus(productId) {
+    let response = await axios.get(`http://localhost:3000/basket/${productId}`)
+
+    const product = response.data
+
+    product.count++
+
+    await axios.put(`http://localhost:3000/basket/${productId}`, product)
+
+    getData()
+
+}
+
+// ChangeCount Function
+
+async function ChangeCount(productId, value) {
+    let response = await axios.get(`http://localhost:3000/basket/${productId}`)
+
+    const product = response.data
+
+    if (value < 1) {
+        await axios.delete(`http://localhost:3000/basket/${productId}`)
+    }
+    else{
+        product.count = +value
+
+        await axios.put(`http://localhost:3000/basket/${productId}`, product)
+    }
+
+    getData()
+
+}
+
+
+// Calculating Subtotal
+
+// HTML stuff
+const subTotalPrice = document.querySelector('.subTotalPrice')
+
+// CalculateSubtotal Function
+async function CalculateSubtotal() {
+    let response = await axios.get(`http://localhost:3000/basket/`)
+
+    const data = response.data
+
+    let subtotal = 0
+
+    data.forEach(element => {
+        subtotal += element.count*+element.price
+    });
+
+    subTotalPrice.textContent = `$${subtotal}`
+
+}
+
+CalculateSubtotal()
+
+
+
+// Writeing And Deleting
+
+// HTML stuff
+const wrap = document.querySelector('.wrap')
+
+// Words Array
+const words = [' Technology', ' Meets Creativity']
+
+let i = 0
+let j = 0
+
+let str = ''
+
+// A function that adds word to wrap
+function Add(str, j, cb) {
+    const interval = setInterval(() => {
+        if (str !== words[j]) {
+            str += words[j][i]
+            wrap.textContent = str
+            // console.log(`${str} Add`);
+            i++;
+        }
+        else if (str === words[j]) {
+            i = 0
+            // sleep(2000)
+            cb(str, Add)
+            clearInterval(interval);
+        }
+    }, 300);
+}
+
+// A function that removes the added word from wrap
+function Remove(str, cb) {
+    const interval = setInterval(() => {
+        if (str === '') {
+            clearInterval(interval)
+            if (j === 0) {
+                j = 1
+                cb('', j, Remove)
+            }
+            else {
+                j = 0
+                cb('', j, Remove)
+            }
+        }
+        str = str.slice(0, -1)
+        wrap.textContent = str
+        // console.log(`${str} Remove`);
+    }, 200)
+}
+
+Add(str, j, Remove)
 
 

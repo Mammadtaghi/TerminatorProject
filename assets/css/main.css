@@ -23,50 +23,56 @@ input[type=number] {
   font-family: "Readex Pro", sans-serif;
 }
 
-.sideShoppingCart {
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header .sideShoppingCart {
   width: 400px;
   height: 100vh;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -400px;
+  z-index: 2;
   background-color: rgb(57, 62, 64);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 0.4s;
 }
-.sideShoppingCart .shoppingCartTitleBox {
+header .sideShoppingCart .shoppingCartTitleBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
 }
-.sideShoppingCart .shoppingCartTitleBox .shoppingCartTitle {
+header .sideShoppingCart .shoppingCartTitleBox .shoppingCartTitle {
   font-weight: 500;
 }
-.sideShoppingCart .shoppingCartTitleBox .shoppingCartCloseBtn {
+header .sideShoppingCart .shoppingCartTitleBox .shoppingCartCloseBtn {
   cursor: pointer;
   font-size: 25px;
   transition: 0.3s;
 }
-.sideShoppingCart .shoppingCartTitleBox .shoppingCartCloseBtn:hover {
+header .sideShoppingCart .shoppingCartTitleBox .shoppingCartCloseBtn:hover {
   transform: rotate(180deg);
 }
-.sideShoppingCart .shoppingCartProductBox {
+header .sideShoppingCart .shoppingCartProductBox {
   height: 500px;
   overflow: auto;
 }
-.sideShoppingCart .shoppingCartProductBox .product {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct {
   width: 100%;
   height: 200px;
   display: flex;
   padding: 25px 30px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productImg {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductImg {
   cursor: pointer;
   width: 100px;
   height: 135px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox {
   width: 100%;
   height: 100%;
   display: flex;
@@ -74,21 +80,21 @@ input[type=number] {
   padding-left: 20px;
   row-gap: 10px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productTitleBox {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productTitleBox .productName {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductName {
   font-weight: 500;
   cursor: pointer;
   transition: 0.4s;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productTitleBox .productName:hover {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductName:hover {
   color: rgb(255, 116, 45);
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productTitleBox .productDeleteBtn {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductDeleteBtn {
   cursor: pointer;
   width: 28px;
   height: 28px;
@@ -100,20 +106,20 @@ input[type=number] {
   justify-content: center;
   transition: 0.4s;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productTitleBox .productDeleteBtn:hover {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductDeleteBtn:hover {
   background-color: rgb(76, 82, 85);
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productPrice {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductPrice {
   font-size: 25px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .decreaseCount {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .decreaseCount {
   cursor: pointer;
   width: 45px;
   height: 46px;
@@ -125,15 +131,15 @@ input[type=number] {
   border-radius: 10px 0px 0px 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px 5px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .decreaseCount .fa-minus {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .decreaseCount .fa-minus {
   font-size: 20px;
   transition: 0.3s;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .decreaseCount .fa-minus:hover {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .decreaseCount .fa-minus:hover {
   color: #f60;
   transform: scale(1.3);
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .productCount {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .shoppingCartProductCount {
   width: 48px;
   height: 46px;
   text-align: center;
@@ -142,7 +148,7 @@ input[type=number] {
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px 5px;
   font-size: 17px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .increaseCount {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .increaseCount {
   cursor: pointer;
   width: 45px;
   height: 46px;
@@ -154,25 +160,25 @@ input[type=number] {
   border-radius: 0px 10px 10px 0px;
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px 5px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .increaseCount .fa-plus {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .increaseCount .fa-plus {
   transition: 0.3s;
   font-size: 20px;
 }
-.sideShoppingCart .shoppingCartProductBox .product .productInfoBox .productCountBox .increaseCount .fa-plus:hover {
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .increaseCount .fa-plus:hover {
   color: #f60;
   transform: scale(1.3);
 }
-.sideShoppingCart .shoppingCartBottomBox {
+header .sideShoppingCart .shoppingCartBottomBox {
   display: flex;
   flex-direction: column;
   padding: 30px;
   row-gap: 30px;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox {
   display: flex;
   justify-content: space-between;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox .summary {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox .summary {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -180,42 +186,42 @@ input[type=number] {
   align-items: center;
   row-gap: 10px;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox .summary .summaryIcon {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox .summary .summaryIcon {
   font-size: 20px;
   transition: 0.3s;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox .summary .summaryTitle {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox .summary .summaryTitle {
   font-weight: 500;
   font-size: 12px;
   color: #f60;
   transition: 0.3s;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox .summary:hover .summaryIcon {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox .summary:hover .summaryIcon {
   color: #f60;
 }
-.sideShoppingCart .shoppingCartBottomBox .summariesBox .summary:hover .summaryTitle {
+header .sideShoppingCart .shoppingCartBottomBox .summariesBox .summary:hover .summaryTitle {
   color: white;
 }
-.sideShoppingCart .shoppingCartBottomBox .subTotalBox {
+header .sideShoppingCart .shoppingCartBottomBox .subTotalBox {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.sideShoppingCart .shoppingCartBottomBox .subTotalBox .subTotal {
+header .sideShoppingCart .shoppingCartBottomBox .subTotalBox .subTotal {
   font-weight: 500;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
 }
-.sideShoppingCart .shoppingCartBottomBox .subTotalBox .taxInfo {
+header .sideShoppingCart .shoppingCartBottomBox .subTotalBox .taxInfo {
   font-size: 15px;
 }
-.sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons {
+header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
-.sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .checkoutBtn {
+header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .checkoutBtn {
   cursor: pointer;
   padding: 15px;
   border: 0px;
@@ -223,10 +229,10 @@ input[type=number] {
   border-radius: 7px;
   transition: 0.3s;
 }
-.sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .checkoutBtn:hover {
+header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .checkoutBtn:hover {
   background-color: rgba(192, 64, 0, 0.8156862745);
 }
-.sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .viewCartBtn {
+header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .viewCartBtn {
   cursor: pointer;
   padding: 15px;
   border: 1px solid white;
@@ -234,7 +240,7 @@ input[type=number] {
   border-radius: 7px;
   transition: 0.5s;
 }
-.sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .viewCartBtn:hover {
+header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .viewCartBtn:hover {
   background-color: rgba(192, 64, 0, 0.8156862745);
   border: 0px;
 }
@@ -267,6 +273,8 @@ input[type=number] {
   gap: 20px;
 }
 #nav .navContainer .navContainerLeft .navList li {
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   margin: 10px 0;
 }
@@ -376,6 +384,8 @@ input[type=number] {
 }
 #nav .navContainer .navContainerMiddle {
   grid-area: Middle;
+  position: relative;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,7 +530,6 @@ input[type=number] {
 }
 .overlay {
   width: 100vw;
-  height: 100vh;
   position: relative;
   top: 0;
   left: 0;
@@ -537,6 +546,7 @@ input[type=number] {
   position: absolute;
   top: 0;
   left: -400px;
+  z-index: 2;
   background-color: rgb(57, 62, 64);
   transition: 0.4s;
   overflow: hidden;
@@ -692,6 +702,309 @@ input[type=number] {
   width: 100%;
 }
 .sideNavContainer .sideIconMenu i {
+  cursor: pointer;
   font-size: 27px;
   padding-right: 20px;
+  transition: 0.3s;
+}
+.sideNavContainer .sideIconMenu i:hover {
+  transform: scale(1.1);
+}
+
+#searchRobot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fabstract-connected-dots-lines-blue-background_34629-424.jpg%3Fsize%3D626%26ext%3Djpg&f=1&nofb=1&ipt=84a170b947705e59f037ae418cb55477a440416d75c49c91f34214c89cc7c5be&ipo=images");
+  background-size: cover;
+  padding-bottom: 5em;
+}
+#searchRobot .searcRobotContainer {
+  height: 1000px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#searchRobot .searcRobotContainer img[alt=Terminator] {
+  height: 760px;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs {
+  width: fit-content;
+  background-color: rgb(24, 26, 27);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-6em);
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs #search {
+  outline-style: none;
+  box-shadow: none;
+  box-sizing: content-box;
+  width: 563px;
+  height: 60px;
+  padding: 0px 160px 0px 25px;
+  background-color: transparent;
+  font-size: 18px;
+  border-radius: 8px 0pc 0pc 8px;
+  border: 0px;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs #generateBtn {
+  cursor: pointer;
+  box-sizing: content-box;
+  width: 100px;
+  height: 46px;
+  padding: 0px 20px;
+  border: 0px;
+  border-radius: 8px;
+  background-color: #d40;
+  transition: 0.4s;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .keywordsBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .keywordsBox .keyword {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #444;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .keywordsBox .keyword:hover {
+  background-color: #d40;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
+  max-width: 1150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5em;
+  row-gap: 2em;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
+  font-size: 3.7em;
+  font-weight: 500;
+  text-align: start;
+  word-break: break-all;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle .wrap {
+  color: #e50;
+  word-break: keep-all;
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle .wrap::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 70px;
+  background-color: #111;
+  transform: translateY(10px);
+}
+#searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
+  width: 888px;
+}
+
+@media screen and (max-width: 1200px) {
+  #searchRobot .searcRobotContainer img[alt=Terminator] {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 750px) {
+  #searchRobot .searcRobotContainer img[alt=Terminator] {
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox {
+    padding-top: 2em;
+    padding-bottom: 10em;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    background-color: #444;
+    width: fit-content;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox {
+    transform: translateY(6em);
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs #search {
+    width: 100%;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
+    width: 100vw;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
+    padding-top: 25px;
+    font-size: 34px;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle .wrap::after {
+    height: 34px;
+    transform: translateY(5px);
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle, #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
+    width: 90vw;
+  }
+}
+#popularProducts {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px;
+}
+#popularProducts .popularProductsTitleBox {
+  align-self: baseline;
+}
+#popularProducts .popularProductsTitleBox .popularProductsTitle {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+#popularProducts .popularProductsTitleBox .popularProductsInfo {
+  line-height: 2em;
+  margin-bottom: 30px;
+}
+#popularProducts .productsBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 40px;
+}
+#popularProducts .productsBox .product {
+  cursor: pointer;
+  width: 378px;
+  height: 649px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5em;
+}
+#popularProducts .productsBox .product .productImgBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+#popularProducts .productsBox .product .productImgBox img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+#popularProducts .productsBox .product .productImgBox .addButtons {
+  opacity: 0;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33px;
+  position: absolute;
+  top: calc(50% - 40px);
+  right: 0;
+  transition: 0.4s;
+}
+#popularProducts .productsBox .product .productImgBox .addButtons .productBtn {
+  position: relative;
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  border-radius: 33px;
+  border: 0px;
+  background-color: #d40;
+  transition: 0.3s;
+}
+#popularProducts .productsBox .product .productImgBox .addButtons .productBtn .description {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 120px;
+  height: 33px;
+  background-color: #d40;
+  transition: 0.4s;
+}
+#popularProducts .productsBox .product .productImgBox .addButtons .productBtn:hover .description {
+  opacity: 1;
+  left: -130px;
+}
+#popularProducts .productsBox .product .productImgBox .addButtons .productBtn:hover {
+  background-color: #252525;
+}
+#popularProducts .productsBox .product .productTextBox {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2em;
+}
+#popularProducts .productsBox .product .productTextBox .productName {
+  font-size: 25px;
+  font-weight: 500;
+  align-self: baseline;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+#popularProducts .productsBox .product .productTextBox .productPrice {
+  font-size: 33px;
+  font-weight: 500;
+  padding-bottom: 50px;
+}
+#popularProducts .productsBox .product:hover .productName {
+  color: #d40;
+}
+#popularProducts .productsBox .product:hover .addButtons {
+  right: 10%;
+  opacity: 1;
+}
+#popularProducts .productsBox .product:hover img {
+  transform: scale(1.2);
+}
+#popularProducts .viewAll {
+  cursor: pointer;
+  align-self: center;
+  padding: 12px 35px;
+  border-radius: 8px;
+  border: 0px;
+  background-color: #d40;
+  transition: 0.4s;
+}
+#popularProducts .viewAll:hover {
+  background-color: #c30;
+}
+
+@media screen and (max-width: 1600px) {
+  #popularProducts {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+  }
+  #popularProducts .productsBox {
+    flex-wrap: wrap;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Document</title>
 </head>
@@ -125,7 +126,7 @@
                     <button class="tryForFreeBtn">TRY FOR FREE</button>
 
                     <i class="fa-solid fa-bag-shopping shoppingBag" onclick="openShoppingCart()">
-                        <div class="productCountOnIcon">2</div>
+                        <div class="productCountOnIcon">0</div>
                     </i>
 
                 </div>
@@ -156,9 +157,11 @@
                 <ul class="sideNavList">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li class="sideNavShop" onclick="openShop()"><a href="#">Shop<i class="fa-solid fa-arrow-right-long"></i></a></li>
+                    <li class="sideNavShop" onclick="openShop()"><a href="#">Shop<i
+                                class="fa-solid fa-arrow-right-long"></i></a></li>
                     <li><a href="#">Blog</a></li>
-                    <li class="sideNavPages" onclick="openPages()"><a href="#">Pages<i class="fa-solid fa-arrow-right-long"></i></a></li>
+                    <li class="sideNavPages" onclick="openPages()"><a href="#">Pages<i
+                                class="fa-solid fa-arrow-right-long"></i></a></li>
                 </ul>
 
                 <div class="sideShopSubNav">
@@ -234,7 +237,7 @@
                         <h3><i class="fa-solid fa-arrow-left-long"></i>Pages</h3>
 
                     </div>
-                    
+
                     <ul class="subPagesList">
                         <li>FAQ</li>
                         <li>Contact</li>
@@ -275,35 +278,21 @@
             <div class="shoppingCartProductBox">
                 <!-- ExampleProduct start -->
 
-                <div class="product">
-                    
-                    <img class="productImg" src="assets/images/shop-4.png" alt="">
-
-                    <div class="productInfoBox">
-                        
-                        <div class="productTitleBox">
-
-                            <h3 class="productName">The Dark War</h3>
-
-                            <div class="productDeleteBtn"><i class="fa-solid fa-xmark productDeleteIcon"></i></div>    
-
+                <!-- <div class="shoppingCartProduct">
+                    <img class="shoppingCartProductImg" src="assets/images/shop-4.png" alt="">
+                    <div class="shoppingCartProductInfoBox">
+                        <div class="shoppingCartProductTitleBox">
+                            <h3 class="shoppingCartProductName">The Dark War</h3>
+                            <div class="shoppingCartProductDeleteBtn"><i class="fa-solid fa-xmark shoppingCartProductDeleteIcon"></i></div>
                         </div>
-
-                        <div class="productPrice">$13.00</div>
-
-                        <div class="productCountBox">
-
+                        <div class="shoppingCartProductPrice">$13.00</div>
+                        <div class="shoppingCartProductCountBox">
                             <div class="decreaseCount"><i class="fa-solid fa-minus"></i></div>
-
-                            <input type="number" class="productCount">
-
+                            <input type="number" class="shoppingCartProductCount">
                             <div class="increaseCount"><i class="fa-solid fa-plus"></i></div>
-
                         </div>
-
                     </div>
-
-                </div>
+                </div> -->
 
                 <!-- ExampleProduct end -->
             </div>
@@ -313,7 +302,7 @@
                 <div class="summariesBox">
 
                     <div class="summary addNote">
-                        
+
                         <i class="fa-solid fa-list summaryIcon"></i>
 
                         <h6 class="summaryTitle">Add Note</h6>
@@ -340,7 +329,7 @@
 
                 <div class="subTotalBox">
 
-                    <h3 class="subTotal">Subtotal <span class="subTotalPrice">$13.00</span></h3>
+                    <h3 class="subTotal">Subtotal <span class="subTotalPrice">$0.00</span></h3>
 
                     <p class="taxInfo">Taxes and shipping calculated at checkout</p>
 
@@ -364,10 +353,84 @@
 
     <main>
 
-        <section id="searchRobot"></section>
+        <section id="searchRobot">
+
+            <div class="searcRobotContainer" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+
+                <img src="assets/images/Robo.png" alt="Terminator">
+
+                <div class="searchRobotTextBox">
+
+                    <div class="searchBox">
+
+                        <div class="searchInputs">
+
+                            <input type="text" id="search" placeholder="Search">
+
+                            <input type="button" id="generateBtn" value="Generate">
+
+                        </div>
+
+                        <div class="keywordsBox">Keywords: <span class="keyword">Graphical</span><span
+                                class="keyword">Illustration</span><span class="keyword">Anime</span><span
+                                class="keyword">UltraRealistic</span></div>
+
+                    </div>
+
+                    <div class="searchTitleBox">
+
+                        <h1 class="searchTitle">Artificial Intelligence<span class="wrap"></span></h1>
+
+                        <p class="searchInfo">Phasellus a lacus pellentesque, facilisis nulla ut, suscipit libero. Fusce
+                            nisi enim, mollis ut nibh ut, finibus maximus mi. Mauris vitae lectus et ipsum aliquet
+                            eleifend sit amet at eros. Nunc laoreet felis nec luctus maximus.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
         <section id="brandLogo"></section>
+        
         <section id="aboutUs"></section>
-        <section id="popularProducts"></section>
+
+        <section id="popularProducts">
+
+            <div class="popularProductsTitleBox" data-aos="fade-up" data-aos-delay="300" data-aos-duration="2000">
+
+                <h2 class="popularProductsTitle"  >Our Popular Products</h2>
+
+                <p class="popularProductsInfo">Morbi vel euismod turpis, eu ultrices justo. Nullam rhoncug mi efficitur <br> gravida.Vivamus lobortis augue vitae nisi dsque.</p>
+
+            </div>
+
+            <div class="productsBox" data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">
+
+                <!-- Example Product start -->
+                <!-- <div class="product">
+                    <div class="productImgBox">
+                        <img class="productImg" src="assets/images/shop-4.png" alt="">
+                        <div class="addButtons">
+                            <button class="addToCartBtn productBtn" onclick="AddToCart()"><i class="fa-solid fa-bag-shopping"></i><span class="description">Add To Cart</span></button>
+                            <button class="addToWishlistBtn productBtn"><i class="fa-solid fa-heart"></i><span class="description">Add To Wishlist</span></button>
+                        </div>
+                    </div>
+                    <div class="productTextBox">
+                        <h4 class="productName">The Dark War</h4>
+                        <h3 class="productPrice">$13.00</h3>
+                    </div>
+                </div> -->
+                <!-- Example Product end -->
+
+            </div>
+
+            <button class="viewAll">VIEW ALL</button>
+
+        </section>
+
         <section id="aiProcess"></section>
         <section id="imageGallery"></section>
         <section id="pricingPlans"></section>
@@ -380,6 +443,8 @@
 
     <footer></footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

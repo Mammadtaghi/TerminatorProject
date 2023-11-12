@@ -26,6 +26,8 @@
                 gap: 20px;
 
                 li {
+                    position: relative;
+                    z-index: 2;
                     overflow: hidden;
                     margin: 10px 0;
 
@@ -161,6 +163,8 @@
 
         .navContainerMiddle {
             grid-area: Middle;
+            position: relative;
+            z-index: 2;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -341,7 +345,7 @@
 
 .overlay {
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     position: relative;
     top: 0;
     left: 0;
@@ -358,6 +362,7 @@
     position: absolute;
     top: 0;
     left: -400px;
+    z-index: 2;
     background-color: rgb(57, 62, 64);
     transition: 0.4s;
     overflow: hidden;
@@ -546,8 +551,14 @@
         width: 100%;
 
         i {
+            cursor: pointer;
             font-size: 27px;
             padding-right: 20px;
+            transition: 0.3s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
         }
     }
 

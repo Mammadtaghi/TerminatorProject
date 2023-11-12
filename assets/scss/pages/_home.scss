@@ -1,0 +1,361 @@
+#searchRobot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fabstract-connected-dots-lines-blue-background_34629-424.jpg%3Fsize%3D626%26ext%3Djpg&f=1&nofb=1&ipt=84a170b947705e59f037ae418cb55477a440416d75c49c91f34214c89cc7c5be&ipo=images');
+    background-size: cover;
+    padding-bottom: 5em;
+
+    .searcRobotContainer {
+        height: 1000px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img[alt="Terminator"] {
+            height: 760px;
+        }
+
+        .searchRobotTextBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .searchBox {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                .searchInputs {
+                    width: fit-content;
+                    background-color: rgb(24, 26, 27);
+                    padding: 10px;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: translateY(-6em);
+                    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+
+                    #search {
+                        outline-style: none;
+                        box-shadow: none;
+                        box-sizing: content-box;
+                        width: 563px;
+                        height: 60px;
+                        padding: 0px 160px 0px 25px;
+                        background-color: transparent;
+                        font-size: 18px;
+                        border-radius: 8px 0pc 0pc 8px;
+                        border: 0px;
+                    }
+
+                    #generateBtn {
+                        cursor: pointer;
+                        box-sizing: content-box;
+                        width: 100px;
+                        height: 46px;
+                        padding: 0px 20px;
+                        border: 0px;
+                        border-radius: 8px;
+                        background-color: #d40;
+                        transition: 0.4s;
+                    }
+
+                }
+
+                .keywordsBox {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 20px;
+
+                    .keyword {
+                        cursor: pointer;
+                        padding: 5px;
+                        background-color: #444;
+                        border-radius: 8px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: #d40;
+                        }
+                    }
+                }
+            }
+
+            .searchTitleBox {
+                max-width: 1150px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin-top: 5em;
+                row-gap: 2em;
+
+                .searchTitle {
+                    font-size: 3.7em;
+                    font-weight: 500;
+                    text-align: start;
+                    word-break: break-all;
+
+                    .wrap {
+                        color: #e50;
+                        word-break: keep-all;
+
+                        &::after {
+                            content: '';
+                            display: inline-block;
+                            width: 5px;
+                            height: 70px;
+                            background-color: #111;
+                            transform: translateY(10px);
+                        }
+                    }
+                }
+
+                .searchInfo {
+                    width: 888px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #searchRobot {
+    
+        .searcRobotContainer {
+    
+            img[alt="Terminator"] {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #searchRobot {
+    
+        .searcRobotContainer {
+    
+            img[alt="Terminator"] {
+                position: relative;
+                bottom: 0;
+                width: 100vw;
+            }
+    
+            .searchRobotTextBox {
+                padding-top: 2em;
+                padding-bottom: 10em;
+                position: relative;
+                bottom: 0;
+                left: 0;
+                background-color: #444;
+                width: fit-content;
+    
+                .searchBox {
+                    transform: translateY(6em);
+
+                    .searchInputs {
+    
+                        #search {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .searchTitleBox{
+                    width: 100vw;
+
+                    .searchTitle{
+                        padding-top: 25px;
+                        font-size: 34px;
+
+                        .wrap::after{
+                            height: 34px;
+                            transform: translateY(5px);
+                        }
+                    }
+
+                    .searchTitle,.searchInfo{
+                        width: 90vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#popularProducts{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 40px;
+
+    .popularProductsTitleBox{
+        align-self: baseline;
+        
+        .popularProductsTitle{
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .popularProductsInfo{
+            line-height: 2em;
+            margin-bottom: 30px;
+        }
+    }
+
+    .productsBox{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 40px;
+        row-gap: 40px;
+
+        .product{
+            cursor: pointer;
+            width: 378px;
+            height: 649px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.5em;
+
+            .productImgBox{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                width: 100%;
+                height: 80%;
+                overflow: hidden;
+                
+                img{
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    transition: 0.4s;
+                }
+
+                .addButtons{
+                    opacity: 0;
+                    height: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    width: 33px;
+                    position: absolute;
+                    top: calc(50% - 40px);
+                    right: 0;
+                    transition: 0.4s;
+
+                    .productBtn{
+                        position: relative;
+                        cursor: pointer;
+                        width: 33px;
+                        height: 33px;
+                        border-radius: 33px;
+                        border: 0px;
+                        background-color: #d40;
+                        transition: 0.3s;
+
+                        .description{
+                            opacity: 0;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 8px;
+                            position: absolute;
+                            top: 0;
+                            left: -100px;
+                            width: 120px;
+                            height: 33px;
+                            background-color: #d40;
+                            transition: 0.4s;
+                        }
+
+                        &:hover .description{
+                            opacity: 1;
+                            left: -130px;
+                        }
+
+                        &:hover{
+                            background-color: #252525;
+                        }
+                    }
+                }
+            }
+
+            
+            .productTextBox{
+                display: flex;
+                flex-direction: column;
+                column-gap: 2em;
+                
+                .productName{
+                    font-size: 25px;
+                    font-weight: 500;
+                    align-self: baseline;
+                    margin-bottom: 20px;
+                    transition: 0.4s;
+                }
+
+                .productPrice{
+                    font-size: 33px;
+                    font-weight: 500;
+                    padding-bottom: 50px;
+                }
+            }
+
+            &:hover .productName{
+                color: #d40;
+
+            }
+
+            &:hover .addButtons{
+                right: 10%;
+                opacity: 1;
+            }
+
+            &:hover img{
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .viewAll{
+        cursor: pointer;
+        align-self: center;
+        padding: 12px 35px;
+        border-radius: 8px;
+        border: 0px;
+        background-color: #d40;
+        transition: 0.4s;
+
+        &:hover{
+            background-color: #c30;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    #popularProducts{
+        display: flex;
+        flex-direction: column;
+        padding: 100px 40px;
+    
+        .productsBox{
+            flex-wrap: wrap;
+        }
+    }
+}
