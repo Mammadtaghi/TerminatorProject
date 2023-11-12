@@ -5,14 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-
+    
     .navContainer {
         width: 95%;
         display: grid;
         grid-template-areas: "Left Middle Right";
         grid-template-columns: 1fr auto 1fr;
-
+        
         .navContainerLeft {
             grid-area: Left;
             position: relative;
@@ -20,27 +19,28 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-
+            
             .navList {
                 position: relative;
                 display: flex;
                 align-items: center;
                 gap: 20px;
-
-                li {
+                
+                .navListItem {
                     position: relative;
                     z-index: 2;
-                    overflow: hidden;
-                    margin: 10px 0;
-
+                    padding: 40px 0;
+                    
                     a,
                     i {
                         color: white;
                         font-size: 17px;
                         font-weight: 700;
                     }
-
+                    
                     a {
+                        display: inline-block;
+                        overflow: hidden;
                         font-weight: 500;
 
                         span {
@@ -69,20 +69,21 @@
 
                 }
 
-                // Problem 1 solved
-                .shopTag:hover~.subShop {
+                // Problem 1 solved !
+                .shopTag:hover .subShop {
                     opacity: 1;
                     z-index: 2;
+                    display: flex;
                 }
 
                 .subShop {
+                    display: none;
                     opacity: 0;
                     position: absolute;
-                    top: 45px;
+                    top: 5em;
                     left: 0;
-                    z-index: -2;
+                    z-index: -4;
                     width: 90vw;
-                    display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
                     align-items: center;
@@ -94,10 +95,6 @@
                     row-gap: 30px;
                     transition: 0.5s;
 
-                    &:hover {
-                        opacity: 1;
-                        z-index: 2;
-                    }
 
                     .shopItem {
                         width: 50%;
@@ -133,27 +130,25 @@
                     }
                 }
 
-                .pagesTag:hover~.subPages {
+                .pagesTag:hover .subPages {
                     opacity: 1;
                     z-index: 2;
+                    display: inline-block;
                 }
 
                 .subPages {
+                    display: none;
                     opacity: 0;
                     position: absolute;
-                    top: 45px;
-                    left: 16em;
-                    z-index: -2;
+                    top: 5em;
+                    left: 0;
+                    z-index: -4;
                     background-color: rgba($color: #333, $alpha: 0.3);
-                    padding: 35px 35px 35px 35px;
+                    padding: 35px;
                     border: 1px solid #b34903;
                     border-radius: 6px;
                     transition: 0.4s;
 
-                    &:hover {
-                        opacity: 1;
-                        z-index: 2;
-                    }
                 }
             }
 

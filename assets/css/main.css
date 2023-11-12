@@ -257,7 +257,6 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 #nav .navContainer {
   width: 95%;
@@ -279,28 +278,29 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   align-items: center;
   gap: 20px;
 }
-#nav .navContainer .navContainerLeft .navList li {
+#nav .navContainer .navContainerLeft .navList .navListItem {
   position: relative;
   z-index: 2;
-  overflow: hidden;
-  margin: 10px 0;
+  padding: 40px 0;
 }
-#nav .navContainer .navContainerLeft .navList li a,
-#nav .navContainer .navContainerLeft .navList li i {
+#nav .navContainer .navContainerLeft .navList .navListItem a,
+#nav .navContainer .navContainerLeft .navList .navListItem i {
   color: white;
   font-size: 17px;
   font-weight: 700;
 }
-#nav .navContainer .navContainerLeft .navList li a {
+#nav .navContainer .navContainerLeft .navList .navListItem a {
+  display: inline-block;
+  overflow: hidden;
   font-weight: 500;
 }
-#nav .navContainer .navContainerLeft .navList li a span {
+#nav .navContainer .navContainerLeft .navList .navListItem a span {
   padding-right: 5px;
   position: relative;
   top: 0;
   transition: 0.4s linear;
 }
-#nav .navContainer .navContainerLeft .navList li a span::before {
+#nav .navContainer .navContainerLeft .navList .navListItem a span::before {
   content: attr(data-hover);
   display: block;
   width: 100%;
@@ -309,21 +309,22 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   top: -30px;
   left: 0;
 }
-#nav .navContainer .navContainerLeft .navList li:hover span {
+#nav .navContainer .navContainerLeft .navList .navListItem:hover span {
   top: 30px;
 }
-#nav .navContainer .navContainerLeft .navList .shopTag:hover ~ .subShop {
+#nav .navContainer .navContainerLeft .navList .shopTag:hover .subShop {
   opacity: 1;
   z-index: 2;
+  display: flex;
 }
 #nav .navContainer .navContainerLeft .navList .subShop {
+  display: none;
   opacity: 0;
   position: absolute;
-  top: 45px;
+  top: 5em;
   left: 0;
-  z-index: -2;
+  z-index: -4;
   width: 90vw;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -334,10 +335,6 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   overflow: hidden;
   row-gap: 30px;
   transition: 0.5s;
-}
-#nav .navContainer .navContainerLeft .navList .subShop:hover {
-  opacity: 1;
-  z-index: 2;
 }
 #nav .navContainer .navContainerLeft .navList .subShop .shopItem {
   width: 50%;
@@ -366,25 +363,23 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 #nav .navContainer .navContainerLeft .navList .subShop .shopItem .textBox .shopNowBtn:hover {
   background-color: rgb(187, 63, 0);
 }
-#nav .navContainer .navContainerLeft .navList .pagesTag:hover ~ .subPages {
+#nav .navContainer .navContainerLeft .navList .pagesTag:hover .subPages {
   opacity: 1;
   z-index: 2;
+  display: inline-block;
 }
 #nav .navContainer .navContainerLeft .navList .subPages {
+  display: none;
   opacity: 0;
   position: absolute;
-  top: 45px;
-  left: 16em;
-  z-index: -2;
+  top: 5em;
+  left: 0;
+  z-index: -4;
   background-color: rgba(51, 51, 51, 0.3);
-  padding: 35px 35px 35px 35px;
+  padding: 35px;
   border: 1px solid #b34903;
   border-radius: 6px;
   transition: 0.4s;
-}
-#nav .navContainer .navContainerLeft .navList .subPages:hover {
-  opacity: 1;
-  z-index: 2;
 }
 #nav .navContainer .navContainerLeft .toggleIcon {
   display: none;
