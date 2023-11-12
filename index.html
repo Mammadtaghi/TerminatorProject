@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    
     <header>
         <nav></nav>
     </header>
-    
     <main>
-        
         <section id="searchRobot"></section>
         <section id="brandLogo"></section>
         <section id="aboutUs"></section>
@@ -22,14 +20,159 @@
         <section id="aiProcess"></section>
         <section id="imageGallery"></section>
         <section id="pricingPlans"></section>
-        <section id="videoSection"></section>
+        <section id="videoSection">
+            <div class="video_popup"id="video">
+                <a class="video_exit" id="exitbtn"><i class="fa-solid fa-xmark"></i></a>
+                <div class="youtube_video">
+                    <iframe width="860" height="615" src="https://www.youtube.com/embed/pd6HNSh0TJw" frameborder="0" allow=" accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="videoSection_container" data-aos="fade-up" data-aos-duration="1500">
+<div class="video_play_icon">
+    <a class="watch_more" id="playbtn"><i class="fa-solid fa-play"></i></a>
+</div>
+
+            </div>
+        </section>
         <section id="reviews"></section>
-        <section id="aiBlog"></section>
-        <section id="igGallery"></section>
-
+        <section id="aiBlog">
+            <div class="aiBlog_container"data-aos="fade-up" data-aos-duration="1500">
+                <div class="aiBlog_title">
+                    <h2>Latest AI Blog</h2>
+                    <p>Phasellus A Lacus Pellentesque, Fac Mi. Mauris Vitae Lectus Et Ipus.</p>
+                </div>
+                <div class="aiBlog_row">
+                    <div class="aiBlog_col">
+                        <div class="aiBlog_img">
+                            <img src="https://dt-aimax.myshopify.com/cdn/shop/articles/blog-1.jpg?v=1685521972&width=1000" alt="">
+                            <span>May 31</span>
+                        </div>
+                        
+                        <div class="card_content">
+                            <h4>
+                                How to enhance coding with artificial intelligence
+                              </h4>
+                              <p class="card_paragraph">Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Convallis posuere morbi leo urna molestie at elementum eu. Mauris...</p>
+                              <a href=""class="ReadMore">
+                                <p class="link_readmore">Read more</p> 
+                                 <i class="fa-solid fa-arrow-right-long"></i>
+                             </a>
+                        </div>
+                    </div>
+                    <div class="aiBlog_col">
+                        <div class="aiBlog_img">
+                            <img src="https://dt-aimax.myshopify.com/cdn/shop/articles/blog-2.jpg?v=1685521972&width=1000" alt="">
+                            <span>May 31</span>
+                        </div>
+                        <div class="card_content">
+                            <h4>
+                                Future of smart homes with artificial intelligence
+                              </h4>
+                              <p class="card_paragraph">Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Netus et malesuada fames ac turpis. Sed blandit libero volutpat...
+                            </p>
+                            <a href=""class="ReadMore">
+                                <p class="link_readmore">Read more</p> 
+                                 <i class="fa-solid fa-arrow-right-long"></i>
+                             </a>
+                        </div>
+                    </div>
+                    <div class="aiBlog_col">
+                        <div class="aiBlog_img">
+                            <img src="https://dt-aimax.myshopify.com/cdn/shop/articles/blog-3.jpg?v=1685521972&width=1000" alt="">
+                            <span>May 31</span>
+                        </div>
+                        <div class="card_content">
+                            <h4>
+                                What goes into creating artificial intelligence
+                              </h4>
+                              <p class="card_paragraph">Adipiscing tristique risus nec feugiat in fermentum. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Eget nunc scelerisque viverra mauris...
+                            </p>
+                            <a href="" class="ReadMore">
+                               <p class="link_readmore">Read more</p> 
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="igGallery">
+            <div class="igGallery_container"data-aos="fade-up" data-aos-duration="1500">
+<div class="igGallery_col_1">
+    <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
+</div>
+<div class="igGallery_col_2">
+    <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
+</div>
+<div class="igGallery_col_3">
+    <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
+</div>
+<div class="igGallery_col_4">
+    <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
+</div>
+<div class="igGallery_col_5">
+    <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
+</div>
+            </div>
+        </section>
     </main>
-
-    <footer></footer>
-
+    <footer>
+        <div class="footer_container">
+            <div class="footer_row" data-aos="fade-up" data-aos-duration="1500">
+                <div class="footer_col_form">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/Group_129719.png?v=1685008270" alt=""></a>
+                    <p>In hac habitasse platea dictumst. Duis eget purus sit amet ipsum posuere.</p>
+                    <form action="">
+                        <input type="email" placeholder="Your email address" required>
+                        <button><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+            </div>
+            <div class="footer_col_info">
+                <h2>Information <i class="fa-solid fa-plus"id="plusbtninfo"></i><i class="fa-solid fa-minus" id="minusbtninfo"></i></h2>
+                <ul id="info_ul">
+                    <li><a href="">Watch Walkthrough</a></li>
+                    <li><a href="">Request a demo</a></li>
+                    <li><a href="">Customer Reviews</a></li>
+                    <li><a href="">The AI-E Blog</a></li>
+                    <li><a href="">Expert Videos</a></li>
+                </ul>
+            </div>
+            <div class="footer_col_career">
+                <h2>Careers <i class="fa-solid fa-plus"id="plusbtncareer"></i><i class="fa-solid fa-minus"id="minusbtncareer"></i></h2>
+                <ul id="career_ul">
+                    <li><a href="">Affiliate Partners</a></li>
+                    <li><a href="">Email Marketing</a></li>
+                    <li><a href="">Brand Style Guide</a></li>
+                    <li><a href="">Press Newsroom</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer_col_legal">
+                <h2>Legal <i class="fa-solid fa-plus" id="plusbtnlegal"></i><i class="fa-solid fa-minus"id="minusbtnlegal"></i></h2>
+                <ul id="legal_ul">
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                    <li><a href="">Sub-processors</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="">Insights & Guidance</a></li>
+                </ul>
+            </div>
+            <div class="footer_col_our-app">
+                <h2>Get Our App</h2>
+                <a href=""><img src="https://dt-aimax.myshopify.com/cdn/shop/files/Group_769.png?v=1684400964" alt=""></a>
+                <a href=""><img src="https://dt-aimax.myshopify.com/cdn/shop/files/Group_795.png?v=1684400964" alt=""></a>
+            </div>
+            </div>
+            
+            <div class="footer_content">
+              <div class="footer_content_txt-cards">
+                <p>All Right Reserved © 2023 <a href="https://themeforest.net/user/designthemes/portfolio" target="_blank" title="https://themeforest.net/user/designthemes/portfolio">Designthemes</a></p>
+                <img src="https://htmldemo.net/pronia/pronia/assets/images/payment/1.png" alt="">
+              </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
