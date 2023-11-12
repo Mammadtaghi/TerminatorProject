@@ -35,13 +35,13 @@
       "name": "Printed-Tshirt",
       "img": "assets/images/shop-1.png",
       "price": "15.00",
-      "count": 30
+      "count": 20
     },
     {
-      "id": 2,
-      "name": "Sparkle Square",
-      "img": "assets/images/shop-5.png",
-      "price": "13.00",
+      "id": 1,
+      "name": "The Dark War",
+      "img": "assets/images/shop-4.png",
+      "price": "12.00",
       "count": 1
     }
   ],
