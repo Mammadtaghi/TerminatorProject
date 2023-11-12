@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://img.freepik.com/free-photo/digital-techno-background-with-connecting-lines-dots_1048-6291.jpg?w=826&t=st=1699750941~exp=1699751541~hmac=570cd38bb5d83a20e65e115f5d59ff6ad0e3ad7613b51e555bf36e96edff5d70') !important;
+  background-image: url("https://img.freepik.com/free-photo/digital-techno-background-with-connecting-lines-dots_1048-6291.jpg?w=826&t=st=1699750941~exp=1699751541~hmac=570cd38bb5d83a20e65e115f5d59ff6ad0e3ad7613b51e555bf36e96edff5d70") !important;
   background-size: cover;
   padding-bottom: 5em;
 
@@ -44,8 +44,10 @@
           justify-content: center;
           align-items: center;
           transform: translateY(-6em);
-          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+            rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+            rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+            rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
           #search {
             outline-style: none;
@@ -71,7 +73,6 @@
             background-color: #d40;
             transition: 0.4s;
           }
-
         }
 
         .keywordsBox {
@@ -116,7 +117,7 @@
             word-break: keep-all;
 
             &::after {
-              content: '';
+              content: "";
               display: inline-block;
               width: 5px;
               height: 70px;
@@ -136,9 +137,7 @@
 
 @media screen and (max-width: 1200px) {
   #searchRobot {
-
     .searcRobotContainer {
-
       img[alt="Terminator"] {
         width: 90%;
       }
@@ -148,9 +147,7 @@
 
 @media screen and (max-width: 750px) {
   #searchRobot {
-
     .searcRobotContainer {
-
       img[alt="Terminator"] {
         position: relative;
         bottom: 0;
@@ -170,7 +167,6 @@
           transform: translateY(6em);
 
           .searchInputs {
-
             #search {
               width: 100%;
             }
@@ -208,10 +204,8 @@
     display: flex;
 
     .aboutUsImg {
-
       img {
         height: 100%;
-
       }
     }
 
@@ -462,7 +456,6 @@
         }
       }
 
-
       .productTextBox {
         display: flex;
         flex-direction: column;
@@ -485,7 +478,6 @@
 
       &:hover .productName {
         color: #d40;
-
       }
 
       &:hover .addButtons {
@@ -530,7 +522,6 @@
   background-color: #1d1c1c;
   padding-top: 110px;
   padding-bottom: 110px;
-
   .aiProcessContents {
     .aiProcessTitle {
       font-size: 25px;
@@ -550,7 +541,7 @@
       margin-left: auto;
       margin-right: auto;
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       padding: 0 200px;
@@ -645,7 +636,11 @@
     }
   }
 }
-
+@media screen and (max-width: 990px) {
+  .aiProcessCards {
+    flex-wrap: wrap;
+  }
+}
 #pricingPlans {
   .container {
     background-image: url("https://dt-aimax.myshopify.com/cdn/shop/files/pricing-bg.png?v=1684333264");
@@ -824,8 +819,6 @@
   }
 }
 
-
-
 #videoSection {
   background-color: #161313;
   display: flex;
@@ -855,7 +848,6 @@
         font-size: 20px;
       }
     }
-
   }
 
   .videoSection_container {
@@ -981,7 +973,6 @@
           }
 
           .card_paragraph {
-
             font-size: 20px;
             color: #9e9d9d;
             padding-bottom: 50px;
@@ -1004,7 +995,6 @@
               color: white;
               transition: 0.5s;
               transform: rotate(-45deg);
-
             }
           }
 
@@ -1016,7 +1006,6 @@
 
             transform: translateX(0);
           }
-
         }
       }
 
@@ -1036,7 +1025,6 @@
         opacity: 1;
         transform: translateY(-80%);
       }
-
     }
   }
 }
@@ -1082,7 +1070,6 @@
 
         .fa-instagram {
           opacity: 1;
-
         }
       }
     }
@@ -1163,7 +1150,6 @@
 
         .fa-instagram {
           opacity: 1;
-
         }
       }
     }
@@ -1245,7 +1231,6 @@
 
         .fa-instagram {
           opacity: 1;
-
         }
       }
     }
@@ -1258,27 +1243,27 @@
   }
 }
 
-@media screen and (max-width:1447px) {
+@media screen and (max-width: 1447px) {
   .aiBlog_col {
     height: 700px !important;
     width: 399px !important;
   }
 }
 
-@media screen and (max-width:1054px) {
+@media screen and (max-width: 1054px) {
   .aiBlog_col {
     height: 100% !important;
     width: 500px !important;
   }
 }
 
-@media screen and (max-width:790px) {
+@media screen and (max-width: 790px) {
   .aiBlog_col {
     width: 1200px !important;
   }
 }
 
-@media screen and (max-width:958px) {
+@media screen and (max-width: 958px) {
   #videoSection {
     .video_popup {
       .video_exit {
@@ -1289,7 +1274,6 @@
       }
 
       .youtube_video {
-
         iframe {
           width: 500px;
           height: 400px;
@@ -1299,7 +1283,7 @@
   }
 }
 
-@media screen and (max-width:597px) {
+@media screen and (max-width: 597px) {
   #videoSection {
     .video_popup {
       .video_exit {
@@ -1310,7 +1294,6 @@
       }
 
       .youtube_video {
-
         iframe {
           width: 300px;
           height: 200px;
@@ -1320,7 +1303,7 @@
   }
 }
 
-@media screen and (max-width:397px) {
+@media screen and (max-width: 397px) {
   #videoSection {
     .video_popup {
       .video_exit {
@@ -1331,7 +1314,6 @@
       }
 
       .youtube_video {
-
         iframe {
           width: 200px;
           height: 200px;
