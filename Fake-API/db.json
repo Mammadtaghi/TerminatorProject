@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "The Dark War",
+      "img": "assets/images/shop-4.png",
+      "price": "12.00",
+      "count": 0
+    },
+    {
+      "id": 2,
+      "name": "Sparkle Square",
+      "img": "assets/images/shop-5.png",
+      "price": "13.00",
+      "count": 0
+    },
+    {
+      "id": 3,
+      "name": "Printed-Tshirt",
+      "img": "assets/images/shop-1.png",
+      "price": "15.00",
+      "count": 0
+    },
+    {
+      "id": 4,
+      "name": "Ferie-Castle",
+      "img": "assets/images/shop-10.png",
+      "price": "22.00",
+      "count": 0
+    }
+  ],
+  "basket": [
+  ],
+  "profile": {}
+}
