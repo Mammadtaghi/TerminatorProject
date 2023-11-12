@@ -1,0 +1,389 @@
+#aboutUs {
+  background-color: #1d1c1c;
+  .container {
+    background-color: #1d1c1c;
+    display: flex;
+    .aboutUsImg {
+      
+      img {
+        height: 100%;
+       
+      }
+    }
+    .aboutUsText {
+      width: 50%;
+      .aboutUsContent {
+        .topContent {
+          padding: 5rem;
+          .subTitle {
+            background-color: #363636;
+            color: #e34d00;
+            padding: 7px 14px;
+            border-radius: 8px;
+            font-size: 15px;
+            display: inline;
+          }
+          .mainTitle {
+            color: white;
+            font-size: 50px;
+            font-weight: 500;
+            padding-top: 35px;
+            padding-bottom: 35px;
+          }
+          .description {
+            color: #c4c4c4;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 30px;
+          }
+          .checkboxItems {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 5rem;
+            padding-bottom: 7rem;
+            column-gap: 30px;
+            row-gap: 30px;
+            border-bottom: 1px solid #707070;
+            .checkboxItem {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 9px 0;
+              .checkboxImg {
+                width: 13px;
+                height: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: #e34d00;
+                img {
+                  object-fit: cover;
+                  height: auto;
+                  max-width: 100%;
+                }
+              }
+              .checkboxDesc {
+                color: #c4c4c4;
+                padding-left: 15px;
+                width: calc(100% - 20px);
+                font-weight: 300;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .bottomContent {
+          padding: 0 3rem;
+          padding-bottom: 30px;
+          .bottomContentTitle {
+            color: white;
+            font-size: 30px;
+          }
+          .bottomContentLogos {
+            padding: 1.5rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .bottomContentLogo {
+              padding: 1.5rem;
+            }
+          }
+          .discoverBtn {
+            margin-top: 1.5rem;
+            .btn {
+              color: white;
+              background-color: #e34d00;
+              border-radius: 8px;
+              padding: 15px 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 990px) {
+  #aboutUs {
+    .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      .aboutUsImg {
+        width: 100%;
+        img{
+          width: 100%;
+        }
+      }
+      .aboutUsText {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 404px) {
+  #aboutUs {
+    .container {
+      flex-direction: column;
+      .aboutUsImg {
+        width: 100vw;
+      }
+      .aboutUsText {
+        width: 100vw;
+      }
+    }
+  }
+}
+
+#aiProcess {
+  background-color: #1d1c1c;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  .aiProcessContents {
+    .aiProcessTitle {
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 50px;
+      h2 {
+        color: white;
+        span {
+          color: #e34d00;
+        }
+      }
+    }
+    .aiProcessCards {
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0 200px;
+      .aiProcessCard {
+        position: relative;
+        width: 407.5px;
+        text-align: center;
+        padding: 1.5rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .cardImg {
+          margin-bottom: 20px;
+          img {
+            width: 120px;
+            height: 110px;
+          }
+          .lastImage {
+            height: 110px;
+            width: 95px;
+          }
+        }
+        .cardInfo {
+          margin-bottom: 20px;
+          .cardName {
+            color: white;
+            font-size: 21px;
+          }
+          .count {
+            color: #292828;
+            position: absolute;
+            opacity: 0.4;
+            font-size: clamp(2rem, 0.5175rem + 5.4vw, 10rem);
+            right: 60px;
+            z-index: 1;
+            bottom: 140px;
+          }
+        }
+        .cardDesc {
+          color: #c4c4c4;
+          font-weight: 300;
+          font-size: 15px;
+          margin-bottom: 40px;
+        }
+        .readMoreArrow {
+          overflow: hidden;
+          display: flex;
+          align-self: center;
+          justify-content: center;
+          width: 108px;
+          .arrow {
+            transition: 0.7s;
+            transform: translateX(-82px);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .readMore {
+              color: white;
+              text-decoration: none;
+              display: inline-block;
+              overflow: hidden;
+            }
+            .fa-arrow-right-long {
+              color: white;
+              transition: 0.5s;
+              transform: rotate(-45deg);
+            }
+          }
+          .arrow:hover {
+            transform: translateX(0);
+            .fa-arrow-right-long {
+              transform: rotate(0deg);
+              color: #e34d00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#pricingPlans {
+  .container {
+    background-image: url("https://dt-aimax.myshopify.com/cdn/shop/files/pricing-bg.png?v=1684333264");
+    background-size: cover;
+    .bannerContents {
+      width: 100%;
+      height: fit-content;
+      .title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 35px;
+        padding-top: 140px;
+        h3 {
+          color: white;
+          span {
+            color: #e34d00;
+          }
+        }
+      }
+      .titleDesc {
+        text-align: center;
+        color: #c4c4c4;
+      }
+      .pricingCards {
+        display: flex;
+        padding: 50px 0;
+        justify-content: center;
+        align-items: center;
+        column-gap: 120px;
+        .pricingCard {
+          background-color: black;
+          border: 1px solid #e34d00;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 400px;
+          height: 880px;
+          border-radius: 8px;
+          .cardImg {
+            img {
+              height: 100%;
+              width: 100%;
+              max-height: 150px;
+              max-width: 145px;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+            }
+          }
+          .cardContent {
+            text-align: center;
+            .cardTitle {
+              color: white;
+              font-size: 40px;
+              margin-bottom: 35px;
+            }
+            .cardDate::before {
+              background-color: #c4c4c4;
+              content: "";
+              display: inline-block;
+              height: 1px;
+              width: 120px;
+            }
+            .cardDate {
+              color: #c4c4c4;
+              display: flex;
+              align-items: center;
+              column-gap: 20px;
+            }
+            .cardDate::after {
+              background-color: #c4c4c4;
+              content: "";
+              display: inline-block;
+              height: 1px;
+              width: 120px;
+            }
+
+            .cardDesc {
+              margin-bottom: 2rem;
+              .pricingList {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 3rem;
+                padding-left: 70px;
+                .checkboxAndText {
+                  align-items: center;
+                  display: flex;
+                  margin-bottom: 25px;
+                  .descText {
+                    .checkboxText {
+                      font-size: 13px;
+                    }
+                  }
+                }
+                .text {
+                  color: #c4c4c4;
+                  margin-top: 30px;
+                }
+              }
+              .cardDescCheckbox {
+                width: 1.3rem;
+                height: 1.3rem;
+                padding: 0.35rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background: #e34d00;
+                margin-right: 15px;
+              }
+              .descText {
+                color: white;
+                font-size: 20px;
+              }
+            }
+          }
+          .cardBtn {
+            background-color: #e34d00;
+            margin-top: 30px;
+            padding: 15px 0;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+            a {
+              color: white;
+            }
+          }
+        }
+        .side {
+          transition: 0.8s;
+          &:hover {
+            transform: translateY(30px);
+          }
+        }
+        .middle {
+          transition: 0.8s;
+          // transform: translateY(70px);
+          &:hover {
+            transform: translateY(-15px);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .pricingCards {
+    flex-direction: column;
+  }
+}
