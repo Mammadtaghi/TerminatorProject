@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.css">
@@ -396,7 +397,28 @@
 
         </section>
 
-        <section id="brandLogo"></section>
+        <section id="brandLogo" class="myautoSwiper">
+            <div class="brandLogo_container">
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand4.png?v=1683631893&width=1500" alt="" class="logo_img"></a>
+                </div>
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand5.png?v=1683631893&width=1500" alt=""class="logo_img"></a>
+                </div>
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand6.png?v=1683631893&width=1500" alt=""class="logo_img"></a>
+                </div>
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand1.png?v=1683631893&width=1500" alt=""class="logo_img"></a>
+                </div>
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand2.png?v=1683631893&width=1500" alt=""class="logo_img"></a>
+                </div>
+                <div class="logo swiper-autoslide">
+                    <a href="#"><img src="https://dt-aimax.myshopify.com/cdn/shop/files/brand3.png?v=1683631893&width=1500" alt=""class="logo_img"></a>
+                </div>
+            </div>
+        </section>
         
         <section id="aboutUs">
 
@@ -627,33 +649,34 @@
             </div>
 
         </section>
-        <section id="imageGallery">
 
+        <section id="imageGallery">
             <div class="container">
                 <div class="title">
-                  <div class="mainTitle">
-                    <h2>
-                      Creative AI
-                      <span>Image Gallery</span>
-                    </h2>
-                  </div>
-                  <div class="subTitle">
-                    <p class="description">
-                      Donec eleifend quis felis eget cursus. Duis diam ligula, congue
-                      ac tortor nec, euismod. erat vitae libero convallis
-                      venenatis.Morbi vel euismod turpis, eu ultrices justo.
-                    </p>
-                  </div>
-                </div>
-                <div class="tabs">
-                  <div class="tablinks">
-                    <div class="tablink" onclick="addIllus()">Illustration</div>
-                    <div class="tablink" onclick="addAnimal()">Animals</div>
-                    <div class="tablink" onclick="addArch()">Architecture</div>
-                    <div class="tablink" onclick="addRobots()">Robotics</div>
-                    <div class="tablink" onclick="addAnimation()">Animation</div>
-                  </div>
-                  <div class="tabPhotos">
+            <div class="mainTitle">
+              <h2>
+                Creative AI
+                <span>Image Gallery</span>
+              </h2>
+            </div>
+            <div class="subTitle">
+              <p class="description">
+                Donec eleifend quis felis eget cursus. Duis diam ligula, congue
+                ac tortor nec, euismod. erat vitae libero convallis
+                venenatis.Morbi vel euismod turpis, eu ultrices justo.
+              </p>
+            </div>
+          </div>
+        <div class="tabs">
+            <div class="tablinks">
+              <div class="tablink" onclick="addIllus()">Illustration</div>
+              <div class="tablink" onclick="addAnimal()">Animals</div>
+              <div class="tablink" onclick="addArch()">Architecture</div>
+              <div class="tablink" onclick="addRobots()">Robotics</div>
+              <div class="tablink" onclick="addAnimation()">Animation</div>
+            </div>
+            <div class="tabPhotosContainer">
+                <div class="tabPhotos">
                     <div class="div1">
                       <img class="img1"
                         src="https://dt-aimax.myshopify.com/cdn/shop/files/tab-masonry3.jpg?v=1684147835&width=1500"
@@ -680,10 +703,11 @@
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-
+            </div>
+          </div>
+        </div>
         </section>
+
         <section id="pricingPlans">
 
             <div class="container">
@@ -905,21 +929,21 @@
                 </div>
             </div>
         </section>
-        <section id="igGallery">
-            <div class="igGallery_container"data-aos="fade-up" data-aos-duration="1500">
-<div class="igGallery_col_1">
+<section id="igGallery" class="mySwiper">
+            <div class="igGallery_container swiper-wrapper"data-aos="fade-up" data-aos-duration="1500">
+<div class="igGallery_col_1 swiper-slide" >
     <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
 </div>
-<div class="igGallery_col_2">
+<div class="igGallery_col_2 swiper-slide" >
     <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
 </div>
-<div class="igGallery_col_3">
+<div class="igGallery_col_3 swiper-slide" >
     <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
 </div>
-<div class="igGallery_col_4">
+<div class="igGallery_col_4 swiper-slide" >
     <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
 </div>
-<div class="igGallery_col_5">
+<div class="igGallery_col_5 swiper-slide" >
     <a class="ig_blur" href="#"><i class="fa-brands fa-instagram"data-aos="fade-down"data-aos-duration="1000"></i></a>
 </div>
             </div>
@@ -983,8 +1007,33 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
-</body>
+<script>
+
+    var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+
+    },
+    768: {
+      slidesPerView: 3,
+
+    },
+    1024: {
+      slidesPerView: 4,
+
+    },
+    1400: {
+      slidesPerView: 5,
+
+    },
+  },
+});
+
+</script>
 
 </body>
 

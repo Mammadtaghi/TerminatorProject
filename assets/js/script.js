@@ -66,14 +66,14 @@ function openShoppingCart() {
     sideShoppingCart.style.display = 'block'
     setTimeout(() => {
         sideShoppingCart.style.opacity = '1'
-        sideShoppingCart.style.right = '0px'
+        sideShoppingCart.style.right = '-3%'
     }, 100);
 }
 
 function closeShoppingCart() {
     overlay.style.zIndex = '-2'
     sideShoppingCart.style.opacity = '0'
-    sideShoppingCart.style.right = '-400px'
+    sideShoppingCart.style.right = '-100%'
     setTimeout(()=> sideShoppingCart.style.display = 'none', 300)
 }
 
@@ -424,6 +424,7 @@ const Illustration = [
   const img3 = document.querySelector(".img3")
   const img4 = document.querySelector(".img4")
   const img5 = document.querySelector(".img5")
+
   function addIllus() {
      img1.src = Illustration[0]
      img2.src = Illustration[1]
@@ -459,4 +460,4 @@ const Illustration = [
       img4.src = Animations[3]
       img5.src = Animations[4]  
    }
-   
+

@@ -29,6 +29,14 @@
       "count": 0
     }
   ],
-  "basket": [],
+  "basket": [
+    {
+      "id": 2,
+      "name": "Sparkle Square",
+      "img": "assets/images/shop-5.png",
+      "price": "13.00",
+      "count": 1
+    }
+  ],
   "profile": {}
 }

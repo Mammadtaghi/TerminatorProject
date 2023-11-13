@@ -34,7 +34,7 @@ header .sideShoppingCart {
   display: none;
   position: absolute;
   top: 0;
-  right: -400px;
+  right: -100%;
   z-index: 2;
   background-color: rgb(57, 62, 64);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -48,9 +48,11 @@ header .sideShoppingCart .shoppingCartTitleBox {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 0px;
 }
 header .sideShoppingCart .shoppingCartTitleBox .shoppingCartTitle {
+  color: white;
   font-weight: 500;
 }
 header .sideShoppingCart .shoppingCartTitleBox .shoppingCartCloseBtn {
+  color: white;
   cursor: pointer;
   font-size: 25px;
   transition: 0.3s;
@@ -88,6 +90,7 @@ header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingC
   align-items: center;
 }
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductName {
+  color: white;
   font-weight: 500;
   cursor: pointer;
   transition: 0.4s;
@@ -110,7 +113,11 @@ header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingC
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductDeleteBtn:hover {
   background-color: rgb(76, 82, 85);
 }
+header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductTitleBox .shoppingCartProductDeleteBtn .shoppingCartProductDeleteIcon {
+  color: white;
+}
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductPrice {
+  color: white;
   font-size: 25px;
 }
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox {
@@ -133,6 +140,7 @@ header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingC
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px 5px;
 }
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .decreaseCount .fa-minus {
+  color: white;
   font-size: 20px;
   transition: 0.3s;
 }
@@ -141,6 +149,7 @@ header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingC
   transform: scale(1.3);
 }
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .shoppingCartProductCount {
+  color: white;
   width: 48px;
   height: 46px;
   text-align: center;
@@ -162,6 +171,7 @@ header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingC
   box-shadow: rgba(0, 0, 0, 0.35) 5px 5px 15px 5px;
 }
 header .sideShoppingCart .shoppingCartProductBox .shoppingCartProduct .shoppingCartProductInfoBox .shoppingCartProductCountBox .increaseCount .fa-plus {
+  color: white;
   transition: 0.3s;
   font-size: 20px;
 }
@@ -174,6 +184,7 @@ header .sideShoppingCart .shoppingCartBottomBox {
   flex-direction: column;
   padding: 30px;
   row-gap: 30px;
+  color: white;
 }
 header .sideShoppingCart .shoppingCartBottomBox .summariesBox {
   display: flex;
@@ -247,6 +258,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 }
 
 #nav {
+  width: 100%;
   position: relative;
   z-index: 2;
   height: 90px;
@@ -255,7 +267,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   align-items: center;
 }
 #nav .navContainer {
-  width: 95%;
+  width: 100%;
   display: grid;
   grid-template-areas: "Left Middle Right";
   grid-template-columns: 1fr auto 1fr;
@@ -304,6 +316,9 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   position: absolute;
   top: -30px;
   left: 0;
+}
+#nav .navContainer .navContainerLeft .navList .navListItem:hover span {
+  top: 30px;
 }
 #nav .navContainer .navContainerLeft .navList .shopTag:hover .subShop {
   opacity: 1;
@@ -401,6 +416,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   column-gap: 60px;
 }
 #nav .navContainer .navContainerRight .tryForFreeBtn {
+  color: white;
   cursor: pointer;
   min-width: 84px;
   min-height: 44px;
@@ -414,6 +430,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   background-color: #b34903;
 }
 #nav .navContainer .navContainerRight .fa-bag-shopping {
+  color: white;
   cursor: pointer;
   position: relative;
   font-size: 25px;
@@ -424,6 +441,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   color: #f60;
 }
 #nav .navContainer .navContainerRight .fa-bag-shopping .productCountOnIcon {
+  color: white;
   position: absolute;
   top: -5px;
   right: -5px;
@@ -437,6 +455,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 
 @media screen and (min-width: 750px) and (max-width: 1200px) {
   #nav {
+    width: 103%;
     background-color: #222;
     height: 60px;
   }
@@ -528,7 +547,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   }
 }
 .overlay {
-  width: 100vw;
+  width: 97vw;
   position: relative;
   top: 0;
   left: 0;
@@ -564,6 +583,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   opacity: 1;
 }
 .sideNavContainer .sideNavCloseBtnDiv .sideNavCloseBtn {
+  color: white;
   font-size: 40px;
 }
 .sideNavContainer #sideNav {
@@ -605,6 +625,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   transition: 0.5s;
 }
 .sideNavContainer #sideNav .sideShopSubNav .shopNavTitle {
+  color: white;
   cursor: pointer;
   padding: 12px 26px;
   transition: 0.4s;
@@ -640,7 +661,11 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   justify-content: flex-start;
   row-gap: 30px;
 }
+.sideNavContainer #sideNav .sideShopSubNav .sideShopItem .sideTextBox .sideShopItemTitle {
+  color: white;
+}
 .sideNavContainer #sideNav .sideShopSubNav .sideShopItem .sideTextBox .sideShopNowBtn {
+  color: white;
   cursor: pointer;
   background-color: transparent;
   font-size: 19px;
@@ -684,6 +709,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   padding: 12px 26px;
 }
 .sideNavContainer #sideNav .sidePagesSubNav .subPagesList li {
+  color: white;
   cursor: pointer;
   font-size: 18px;
   font-weight: 300;
@@ -701,6 +727,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   width: 100%;
 }
 .sideNavContainer .sideIconMenu i {
+  color: white;
   cursor: pointer;
   font-size: 27px;
   padding-right: 20px;
@@ -720,7 +747,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 }
 #searchRobot .searcRobotContainer {
   height: 1000px;
-  padding: 50px;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -730,6 +757,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   height: 760px;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox {
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -743,8 +771,8 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   align-items: center;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs {
-  width: fit-content;
-  background-color: rgb(24, 26, 27);
+  max-width: 80%;
+  background-color: white;
   padding: 10px;
   border-radius: 8px;
   display: flex;
@@ -767,6 +795,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   border: 0px;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs #generateBtn {
+  color: white;
   cursor: pointer;
   box-sizing: content-box;
   width: 100px;
@@ -778,6 +807,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   transition: 0.4s;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .keywordsBox {
+  color: white;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -796,7 +826,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   background-color: #d40;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
-  max-width: 1150px;
+  width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -806,7 +836,8 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   row-gap: 2em;
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
-  font-size: 3.7em;
+  color: white;
+  font-size: 4em;
   font-weight: 500;
   text-align: start;
   word-break: break-all;
@@ -824,28 +855,63 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   transform: translateY(10px);
 }
 #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
-  width: 888px;
+  color: white;
+  max-width: 888px;
 }
 
 @media screen and (max-width: 1200px) {
   #searchRobot .searcRobotContainer img[alt=Terminator] {
     width: 90%;
   }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
+    width: 1000px;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
+    font-size: 3.3em;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
+    width: 850px;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
+    font-size: 2.7em;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
+    width: 700px;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
+    font-size: 2.3em;
+  }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
+    max-width: 600px;
+  }
 }
 @media screen and (max-width: 750px) {
+  #searchRobot {
+    max-width: 100%;
+  }
+  #searchRobot .searcRobotContainer {
+    max-width: 100%;
+  }
   #searchRobot .searcRobotContainer img[alt=Terminator] {
     position: relative;
     bottom: 0;
-    width: 100vw;
+    width: 90vw;
   }
   #searchRobot .searcRobotContainer .searchRobotTextBox {
     padding-top: 2em;
     padding-bottom: 10em;
-    position: relative;
-    bottom: 0;
-    left: 0;
     background-color: #444;
-    width: fit-content;
+    width: 99vw;
   }
   #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox {
     transform: translateY(6em);
@@ -853,8 +919,14 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .searchInputs #search {
     width: 100%;
   }
+  #searchRobot .searcRobotContainer .searchRobotTextBox .searchBox .keywordsBox {
+    flex-wrap: wrap;
+    max-width: 100%;
+    text-align: center;
+    row-gap: 20px;
+  }
   #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox {
-    width: 100vw;
+    max-width: 100%;
   }
   #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle {
     padding-top: 25px;
@@ -865,9 +937,36 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
     transform: translateY(5px);
   }
   #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchTitle, #searchRobot .searcRobotContainer .searchRobotTextBox .searchTitleBox .searchInfo {
-    width: 90vw;
+    max-width: 100%;
   }
 }
+#brandLogo {
+  background-color: #161313;
+  width: 100%;
+  overflow: hidden;
+}
+#brandLogo .brandLogo_container {
+  padding: 60px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#brandLogo .brandLogo_container .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#brandLogo .brandLogo_container .logo a .logo_img {
+  transition: 0.5s;
+  max-width: 100%;
+  max-height: 100%;
+}
+#brandLogo .brandLogo_container .logo a .logo_img:hover {
+  filter: brightness(3.5);
+}
+
 #aboutUs {
   background-color: #1d1c1c;
 }
@@ -994,13 +1093,14 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
     flex-direction: column;
   }
   #aboutUs .container .aboutUsImg {
-    width: 100vw;
+    width: 90vw;
   }
   #aboutUs .container .aboutUsText {
-    width: 100vw;
+    width: 90vw;
   }
 }
 #popularProducts {
+  background-color: #1d1c1c;
   display: flex;
   flex-direction: column;
   padding: 100px 40px;
@@ -1212,7 +1312,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   display: flex;
   align-self: center;
   justify-content: center;
-  width: 108px;
+  width: 108.4999px;
 }
 #aiProcess .aiProcessContents .aiProcessCards .aiProcessCard .readMoreArrow .arrow {
   transition: 0.7s;
@@ -1243,6 +1343,11 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 @media screen and (max-width: 990px) {
   .aiProcessCards {
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 990px) {
+  #aiProcess .aiProcessContents .aiProcessCards {
+    padding: 0px 0px;
   }
 }
 #imageGallery {
@@ -1314,57 +1419,218 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
 #imageGallery .container .tabs .tablinks .tablink:hover:after {
   transform: scaleX(1);
 }
-#imageGallery .container .tabs .tabPhotos {
+#imageGallery .container .tabs .tabPhotosContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 60px;
+}
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas: "div1 div1 div3 div3 div2 div2" "div1 div1 div3 div3 div2 div2" "div1 div1 div4 div5 div2 div2" "div1 div1 div4 div5 div2 div2";
   grid-column-gap: 30px;
-  grid-row-gap: 0px;
-  margin-bottom: 70px;
-  margin-left: 150px;
+  grid-row-gap: 30px;
 }
-#imageGallery .container .tabs .tabPhotos .div1 {
-  grid-area: 1/1/9/3;
-}
-#imageGallery .container .tabs .tabPhotos .div1 img {
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
   width: 100%;
   height: 100%;
 }
-#imageGallery .container .tabs .tabPhotos .div2 {
-  grid-area: 1/5/9/7;
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+  grid-area: div1;
 }
-#imageGallery .container .tabs .tabPhotos .div3 {
-  grid-area: 1/3/5/5;
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+  grid-area: div2;
 }
-#imageGallery .container .tabs .tabPhotos .div4 {
-  grid-area: 5/3/9/4;
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+  grid-area: div3;
 }
-#imageGallery .container .tabs .tabPhotos .div5 {
-  grid-area: 5/4/9/5;
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+  grid-area: div4;
+}
+#imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+  grid-area: div5;
 }
 
-@media screen and (max-width: 990px) {
-  #imageGallery .container .tabs .tabPhotos {
+@media screen and (max-width: 1250px) {
+  #imageGallery .container .tabs .tabPhotosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-rows: 500px 500px 500px;
+    grid-template-columns: 500px 500px;
+    grid-template-areas: "div1 div2" "div3 div3" "div4 div5";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
-  #imageGallery .container .tabs .div1 {
-    grid-area: 1/1/3/3;
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
+    width: 100%;
+    height: 100%;
   }
-  #imageGallery .container .tabs .div2 {
-    grid-area: 1/3/3/5;
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+    grid-area: div1;
   }
-  #imageGallery .container .tabs .div3 {
-    grid-area: 3/1/5/5;
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+    grid-area: div2;
   }
-  #imageGallery .container .tabs .div4 {
-    grid-area: 5/1/7/3;
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+    grid-area: div3;
   }
-  #imageGallery .container .tabs .div5 {
-    grid-area: 5/3/7/5;
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+    grid-area: div4;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+    grid-area: div5;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #imageGallery .container .tabs .tabPhotosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
+    display: grid;
+    grid-template-rows: 400px 400px 400px;
+    grid-template-columns: 400px 400px;
+    grid-template-areas: "div1 div2" "div3 div3" "div4 div5";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
+    width: 100%;
+    height: 100%;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+    grid-area: div1;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+    grid-area: div2;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+    grid-area: div3;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+    grid-area: div4;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+    grid-area: div5;
+  }
+}
+@media screen and (max-width: 850px) {
+  #imageGallery .container .tabs .tabPhotosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
+    display: grid;
+    grid-template-rows: 250px 250px 250px;
+    grid-template-columns: 250px 250px;
+    grid-template-areas: "div1 div2" "div3 div3" "div4 div5";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
+    width: 100%;
+    height: 100%;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+    grid-area: div1;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+    grid-area: div2;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+    grid-area: div3;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+    grid-area: div4;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+    grid-area: div5;
+  }
+}
+@media screen and (max-width: 750px) {
+  #imageGallery .container .title {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  #imageGallery .container .tabs .tablinks {
+    flex-wrap: wrap;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
+    display: grid;
+    grid-template-rows: 250px 250px 250px;
+    grid-template-columns: 250px 250px;
+    grid-template-areas: "div1 div2" "div3 div3" "div4 div5";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
+    width: 100%;
+    height: 100%;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+    grid-area: div1;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+    grid-area: div2;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+    grid-area: div3;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+    grid-area: div4;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+    grid-area: div5;
+  }
+}
+@media screen and (max-width: 550px) {
+  #imageGallery .container .tabs .tabPhotosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 60px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos {
+    display: grid;
+    grid-template-rows: 250px 250px 250px 250px 250px;
+    grid-template-columns: 250px;
+    grid-template-areas: "div1" "div2" "div3" "div4" "div5";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos div img {
+    width: 100%;
+    height: 100%;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div1 {
+    grid-area: div1;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div2 {
+    grid-area: div2;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div3 {
+    grid-area: div3;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div4 {
+    grid-area: div4;
+  }
+  #imageGallery .container .tabs .tabPhotosContainer .tabPhotos .div5 {
+    grid-area: div5;
   }
 }
 #pricingPlans .container {
@@ -1392,6 +1658,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   color: #c4c4c4;
 }
 #pricingPlans .container .bannerContents .pricingCards {
+  max-width: 97%;
   display: flex;
   padding: 50px 0;
   justify-content: center;
@@ -1506,7 +1773,7 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   transform: translateY(-15px);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .pricingCards {
     flex-direction: column;
   }
@@ -1688,10 +1955,14 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   background-color: #161313;
   width: 100%;
   padding-top: 36px;
+  overflow: hidden;
 }
 #igGallery .igGallery_container {
   width: 100%;
   display: flex;
+}
+#igGallery .igGallery_container .swiper-slide {
+  width: 25%;
 }
 #igGallery .igGallery_container .igGallery_col_1 {
   background-image: url(https://dt-aimax.myshopify.com/cdn/shop/files/insta1_2ab87dae-a15b-41a2-8a48-7ba124786cfd.jpg?v=1684129861&width=1500);
@@ -1882,6 +2153,11 @@ header .sideShoppingCart .shoppingCartBottomBox .shoppingCartBottomButtons .view
   #videoSection .video_popup .youtube_video iframe {
     width: 500px;
     height: 400px;
+  }
+}
+@media screen and (max-width: 638px) {
+  #igGallery .igGallery_container .swiper-slide {
+    height: 558px;
   }
 }
 @media screen and (max-width: 597px) {
