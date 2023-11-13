@@ -29,21 +29,6 @@
       "count": 0
     }
   ],
-  "basket": [
-    {
-      "id": 3,
-      "name": "Printed-Tshirt",
-      "img": "assets/images/shop-1.png",
-      "price": "15.00",
-      "count": 30
-    },
-    {
-      "id": 2,
-      "name": "Sparkle Square",
-      "img": "assets/images/shop-5.png",
-      "price": "13.00",
-      "count": 1
-    }
-  ],
+  "basket": [],
   "profile": {}
 }
